@@ -1,3 +1,54 @@
 #### What Is a Makefile?
 
 A Makefile is a file that tells the computer how to build your project. For this scenario, a Makefile containing several commands has been created for you.
+
+
+(.venv) (base) $ make hello
+echo "Hello, world!"
+Hello, world!
+
+
+
+(.venv) (base) $ make all
+pip install --upgrade pip &&\
+        pip install -r requirements.txt
+Requirement already satisfied: pip in ./.venv/lib/python3.8/site-packages (23.0.1)
+Requirement already satisfied: pylint==2.7.2 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (2.7.2)
+Requirement already satisfied: pytest==6.2.2 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 2)) (6.2.2)
+Requirement already satisfied: black==22.3.0 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 3)) (22.3.0)
+Requirement already satisfied: pytest-cov==2.11.1 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 4)) (2.11.1)
+Requirement already satisfied: toml>=0.7.1 in ./.venv/lib/python3.8/site-packages (from pylint==2.7.2->-r requirements.txt (line 1)) (0.10.2)
+Requirement already satisfied: mccabe<0.7,>=0.6 in ./.venv/lib/python3.8/site-packages (from pylint==2.7.2->-r requirements.txt (line 1)) (0.6.1)
+Requirement already satisfied: astroid<2.6,>=2.5.1 in ./.venv/lib/python3.8/site-packages (from pylint==2.7.2->-r requirements.txt (line 1)) (2.5.8)
+Requirement already satisfied: isort<6,>=4.2.5 in ./.venv/lib/python3.8/site-packages (from pylint==2.7.2->-r requirements.txt (line 1)) (5.12.0)
+Requirement already satisfied: iniconfig in ./.venv/lib/python3.8/site-packages (from pytest==6.2.2->-r requirements.txt (line 2)) (2.0.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.8/site-packages (from pytest==6.2.2->-r requirements.txt (line 2)) (23.0)
+Requirement already satisfied: attrs>=19.2.0 in ./.venv/lib/python3.8/site-packages (from pytest==6.2.2->-r requirements.txt (line 2)) (22.2.0)
+Requirement already satisfied: py>=1.8.2 in ./.venv/lib/python3.8/site-packages (from pytest==6.2.2->-r requirements.txt (line 2)) (1.11.0)
+Requirement already satisfied: pluggy<1.0.0a1,>=0.12 in ./.venv/lib/python3.8/site-packages (from pytest==6.2.2->-r requirements.txt (line 2)) (0.13.1)
+Requirement already satisfied: typing-extensions>=3.10.0.0 in ./.venv/lib/python3.8/site-packages (from black==22.3.0->-r requirements.txt (line 3)) (4.5.0)
+Requirement already satisfied: platformdirs>=2 in ./.venv/lib/python3.8/site-packages (from black==22.3.0->-r requirements.txt (line 3)) (3.0.0)
+Requirement already satisfied: click>=8.0.0 in ./.venv/lib/python3.8/site-packages (from black==22.3.0->-r requirements.txt (line 3)) (8.1.3)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./.venv/lib/python3.8/site-packages (from black==22.3.0->-r requirements.txt (line 3)) (1.0.0)
+Requirement already satisfied: pathspec>=0.9.0 in ./.venv/lib/python3.8/site-packages (from black==22.3.0->-r requirements.txt (line 3)) (0.11.0)
+Requirement already satisfied: tomli>=1.1.0 in ./.venv/lib/python3.8/site-packages (from black==22.3.0->-r requirements.txt (line 3)) (2.0.1)
+Requirement already satisfied: coverage>=5.2.1 in ./.venv/lib/python3.8/site-packages (from pytest-cov==2.11.1->-r requirements.txt (line 4)) (7.2.0)
+Requirement already satisfied: lazy-object-proxy>=1.4.0 in ./.venv/lib/python3.8/site-packages (from astroid<2.6,>=2.5.1->pylint==2.7.2->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: wrapt<1.13,>=1.11 in ./.venv/lib/python3.8/site-packages (from astroid<2.6,>=2.5.1->pylint==2.7.2->-r requirements.txt (line 1)) (1.12.1)
+pylint --disable=R,C hello.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+python -m pytest -vv test_hello.py
+============================================== test session starts ==============================================
+platform linux -- Python 3.8.14, pytest-6.2.2, py-1.11.0, pluggy-0.13.1 -- /root/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /root
+plugins: cov-2.11.1
+collected 1 item                                                                                                
+
+test_hello.py::test_hello_subtract PASSED                                                                 [100%]
+
+=============================================== 1 passed in 0.02s ===============================================
+(.venv) (base) $ 
