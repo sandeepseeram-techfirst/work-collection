@@ -47,3 +47,13 @@ test_hello.py::test_hello_subtract PASSED                                       
 
 =============================================== 1 passed in 0.02s ===============================================
 (.venv) (base) $ 
+
+
+(.venv) (base) $ make format
+black *.py
+reformatted hello.py
+reformatted test_hello.py
+
+All done! ✨ 🍰 ✨
+2 files reformatted.
+(.venv) (base) $ 
