@@ -42,3 +42,18 @@ Type "help", "copyright", "credits" or "license" for more information.
 3 2015-03-16  36.549999  36.970001  35.689999  36.500000  32.596218  51212100  2015           12
 4 2015-03-23  36.439999  36.660000  35.000000  35.830002  31.997883  43698600  2015           13
 >>> 
+
+>>> df_trends['Week'] = pd.to_datetime(df_trends['Week'])
+
+>>> df_trends['Year'] = df_trends['Week'].dt.year
+
+>>> df_trends['Week Number'] = df_trends['Week'].dt.week
+
+>>> print(df_trends.head())
+        Week  microsoft  Year  Week Number
+0 2015-03-01         80  2015            9
+1 2015-03-08         80  2015           10
+2 2015-03-15         79  2015           11
+3 2015-03-22         78  2015           12
+4 2015-03-29         76  2015           13
+>>> 
