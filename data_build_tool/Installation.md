@@ -43,3 +43,11 @@ One more thing:
 
 Need help? Don't hesitate to reach out to us via GitHub issues or on Slack --
 There's a link to our Slack group in the GitHub Readme. Happy modeling!
+
+
+##############################################################
+
+$ cd dbt_demo
+$ ls
+analysis  data  dbt_project.yml  macros  models  README.md  snapshots  tests
+$ 

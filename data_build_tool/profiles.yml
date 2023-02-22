@@ -1,0 +1,21 @@
+default:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: demo_user
+      pass: demo_password
+      dbname: postgres
+      schema: public
+    prod:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: demo_user
+      pass: demo_password
+      dbname: postgres
+      schema: public
+  target: dev
