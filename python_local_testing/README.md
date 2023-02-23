@@ -7,7 +7,7 @@ A Makefile is a file that tells the computer how to build your project. For this
 echo "Hello, world!"
 Hello, world!
 
-
+#### calling a command 
 
 (.venv) (base) $ make all
 pip install --upgrade pip &&\
