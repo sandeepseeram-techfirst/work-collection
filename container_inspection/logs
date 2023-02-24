@@ -1,0 +1,13 @@
+$ kubectl logs amicontained-1
+Container Runtime: not-found
+Has Namespaces:
+        pid: true
+        user: false
+AppArmor Profile: docker-default (enforce)
+Capabilities:
+        BOUNDING -> chown dac_override fowner fsetid kill setgid setuid setpcap net_bind_service net_raw sys_chroot mknod audit_write setfcap
+Seccomp: disabled
+Blocked Syscalls (22):
+        SYSLOG SETPGID SETSID VHANGUP PIVOT_ROOT ACCT SETTIMEOFDAY SWAPON SWAPOFF REBOOT SETHOSTNAME SETDOMAINNAME INIT_MODULE DELETE_MODULE KEXEC_LOAD PERF_EVENT_OPEN FANOTIFY_INIT OPEN_BY_HANDLE_AT FINIT_MODULE KEXEC_FILE_LOAD BPF USERFAULTFD
+Looking for Docker.sock
+$ 
