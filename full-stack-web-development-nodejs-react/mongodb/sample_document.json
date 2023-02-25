@@ -1,0 +1,17 @@
+{
+    _id: ObjectId("5effaa5662679b5af2c58829"),
+    email: "example@example.com",
+    age: 22,
+    name: {
+      firstName: "Ahmed", 
+      lastName: "Ashraf"
+    },
+    address: {
+      label: "home",
+      street: "101 Elm Street",
+      city: "Springfield",
+      state: "CA",
+      zip: "90000",
+      country: "US"
+    }           
+  }
