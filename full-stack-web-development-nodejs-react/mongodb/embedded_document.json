@@ -1,0 +1,17 @@
+{
+    _id: <ObjectId>,
+    name: "Ahmed Ashraf",
+    email: "example@example.com",
+    images: [
+      { 
+        _id: <ObjectId>,
+        label: "Cat 1",
+        url: "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13"     
+      },
+      { 
+        _id: <ObjectId>,
+        label: "Cat 2",
+        url: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba"    
+      }
+    ]
+  }
