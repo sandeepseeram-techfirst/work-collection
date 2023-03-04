@@ -1,0 +1,39 @@
+Server dependencies list
+
+The following list contains all the required packages to run the Node.js application:
+
+mongoose
+npm install mongoose
+
+dotenv
+npm install dotenv
+
+joi
+npm install joi
+
+bcrypt
+npm install bcrypt
+
+jsonwebtoken
+npm install jsonwebtoken
+
+nodemailer
+npm install nodemailer
+
+crypto-js
+npm install crypto-js
+
+body-parser
+npm install body-parser
+
+multer
+npm install multer
+
+simple-spellchecker
+npm install simple-spellchecker
+
+string-similarity
+npm install string-similarity
+
+sharp
+npm install sharp
