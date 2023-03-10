@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="/result" method="POST">
+
+  <!-- Carat -->
+  <div>
+    <label for="carat">Carat:</label>
+    <input type="number" id="carat" name="carat" value=1>
+  </div>
+
+  <!-- Cut -->
+  <div>
+    <label for="cut">Cut:</label>
+    <select id="cut" name="cut">
+      <option value="Ideal">Ideal</option>
+      <option selected="Very Good" value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+    </select>
+  </div>
+
+  <!-- Color -->
+  <div>
+    <label for="color">Color:</label>
+    <select id="color" name="color">
+      <option value="D">D</option>
+      <option selected="E" value="E">E</option>
+      <option value="F">F</option>
+      <option value="G">G</option>
+    </select>
+  </div>
+
+  <!-- Clarity -->
+  <div>
+    <label for="clarity">Clarity:</label>
+    <select id="clarity" name="clarity">
+      <option selected="IF" value="IF">Internally Flawless</option>
+      <option value="VVS1">Very, Very Small Inclusions</option>
+      <option value="VS1">Very Small Inclusions</option>
+      <option value="SI1">Small Inclusions</option>
+      <option value="I1">Imperfect</option>
+    </select>
+  </div>
+
+  <!-- Submit -->
+  <div>
+    <button type="submit">Go</button>
+  </div>
+
+</form>
+{% endblock %}
