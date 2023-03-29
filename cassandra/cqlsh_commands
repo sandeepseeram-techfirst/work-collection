@@ -1,0 +1,20 @@
+cqlsh> SHOW VERSION
+[cqlsh 5.0.1 | Cassandra 4.0-alpha4 | CQL spec 3.4.5 | Native protocol v4]
+cqlsh>  
+
+###########################################################################
+
+cqlsh> DESCRIBE CLUSTER
+
+Cluster: Test Cluster
+Partitioner: Murmur3Partitioner
+
+############################################################################
+cqlsh> DESCRIBE KEYSPACES
+
+system_virtual_schema  system_auth   system              system_traces
+system_schema          system_views  system_distributed
+
+cqlsh> 
+############################################################################
+
