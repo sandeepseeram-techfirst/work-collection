@@ -34,3 +34,4 @@ cqlsh:my_keyspace> SELECT * FROM user WHERE first_name='Bill' AND last_name='Ngu
 
 (1 rows)
 cqlsh:my_keyspace> 
+################################################################################################################
