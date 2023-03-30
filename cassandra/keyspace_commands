@@ -14,3 +14,7 @@ cqlsh>
 
 cqlsh> USE my_keyspace;
 cqlsh:my_keyspace>
+
+################################################################################################################
+cqlsh:my_keyspace> CREATE TABLE user (first_name text, last_name text, title text, PRIMARY KEY (last_name, first_name));
+cqlsh:my_keyspace> 
