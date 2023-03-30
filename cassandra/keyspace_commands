@@ -24,3 +24,13 @@ cqlsh:my_keyspace>
 cqlsh:my_keyspace> CREATE TABLE user (first_name text, last_name text, title text, PRIMARY KEY (last_name, first_name));
 cqlsh:my_keyspace> INSERT INTO user (first_name, last_name, title) VALUES ('Bill', 'Nguyen', 'Mr.');
 cqlsh:my_keyspace> 
+
+################################################################################################################
+cqlsh:my_keyspace> SELECT * FROM user WHERE first_name='Bill' AND last_name='Nguyen';
+
+ last_name | first_name | title
+-----------+------------+-------
+    Nguyen |       Bill |   Mr.
+
+(1 rows)
+cqlsh:my_keyspace> 
