@@ -52,3 +52,16 @@ InvalidRequest: Error from server: code=2200 [Invalid query] message="Cannot exe
 cqlsh:my_keyspace> 
 
 ################################################################################################################
+
+cqlsh:my_keyspace> SELECT COUNT (*) FROM user;
+
+ count
+-------
+     1
+
+(1 rows)
+
+Warnings :
+Aggregation query used without partition key
+
+################################################################################################################
