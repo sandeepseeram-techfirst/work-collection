@@ -44,3 +44,11 @@ cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
 
 (1 rows)
 cqlsh:my_keyspace> 
+
+################################################################################################################
+
+cqlsh:my_keyspace> SELECT * FROM user where first_name = 'Bill';
+InvalidRequest: Error from server: code=2200 [Invalid query] message="Cannot execute this query as it might involve data filtering and thus may have unpredictable performance. If you want to execute this query despite the performance unpredictability, use ALLOW FILTERING"
+cqlsh:my_keyspace> 
+
+################################################################################################################
