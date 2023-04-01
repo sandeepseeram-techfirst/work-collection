@@ -81,3 +81,14 @@ cqlsh:my_keyspace> SELECT * FROM user WHERE first_name='Bill' AND last_name='Ngu
 cqlsh:my_keyspace> 
 
 ################################################################################################################
+cqlsh:my_keyspace> DELETE FROM USER WHERE first_name='Bill' AND last_name='Nguyen';
+cqlsh:my_keyspace> SELECT * FROM user WHERE first_name='Bill' AND last_name='Nguyen';
+
+ last_name | first_name | title
+-----------+------------+-------
+
+(0 rows)
+cqlsh:my_keyspace> 
+################################################################################################################
+
+
