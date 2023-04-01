@@ -65,3 +65,8 @@ Warnings :
 Aggregation query used without partition key
 
 ################################################################################################################
+
+cqlsh:my_keyspace> DELETE title FROM USER WHERE first_name='Bill' AND last_name='Nguyen';
+cqlsh:my_keyspace> 
+
+################################################################################################################
