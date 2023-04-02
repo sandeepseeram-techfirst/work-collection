@@ -20,3 +20,14 @@ cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
 cqlsh:my_keyspace> 
 
 ################################################################################################################ 
+
+cqlsh:my_keyspace> ALTER TABLE user ADD logins int;
+cqlsh:my_keyspace> UPDATE user SET logins = 1 WHERE first_name = 'Bill' AND last_name = 'Nguyen';
+cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
+
+ last_name | first_name | logins | title
+-----------+------------+--------+-------
+    Nguyen |       Bill |      1 |   Mr.
+
+(1 rows)
+cqlsh:my_keyspace> 
