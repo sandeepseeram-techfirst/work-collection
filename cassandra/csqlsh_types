@@ -33,3 +33,15 @@ cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
 cqlsh:my_keyspace> 
 
 ################################################################################################################
+
+cqlsh:my_keyspace> ALTER TABLE user ADD account_created timestamp;
+cqlsh:my_keyspace> UPDATE user SET account_created = '2015-06-15T20:05:07-0700' WHERE first_name = 'Bill' AND last_name = 'Nguyen';
+cqlsh:my_keyspace> UPDATE user SET account_created = currentTimestamp() WHERE first_name = 'Bill' AND last_name = 'Nguyen';
+cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
+
+ last_name | first_name | account_created                 | logins | title
+-----------+------------+---------------------------------+--------+-------
+    Nguyen |       Bill | 2023-05-29 08:54:25.429000+0000 |      1 |   Mr.
+
+(1 rows)
+cqlsh:my_keyspace> 
