@@ -45,3 +45,14 @@ cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
 
 (1 rows)
 cqlsh:my_keyspace> 
+
+
+cqlsh:my_keyspace> ALTER TABLE user ADD id uuid;
+cqlsh:my_keyspace> UPDATE user SET id = uuid() WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT first_name, id FROM user WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ first_name | id
+------------+--------------------------------------
+       Mary | 0b2f0797-e13c-4014-81bd-998ccbfb4aa5
+
+(1 rows)
