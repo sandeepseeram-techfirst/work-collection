@@ -57,3 +57,14 @@ cqlsh:my_keyspace> SELECT first_name, id FROM user WHERE first_name = 'Mary' AND
        Mary | 0b2f0797-e13c-4014-81bd-998ccbfb4aa5
 
 (1 rows)
+
+
+cqlsh:my_keyspace> CREATE TABLE user_visits (user_id uuid PRIMARY KEY, visits counter);
+cqlsh:my_keyspace> UPDATE user_visits SET visits = visits + 1 WHERE user_id=ebf87fee-b372-4104-8a22-00c1252e3e05;cqlsh:my_keyspace> SELECT visits from user_visits WHERE user_id=ebf87fee-b372-4104-8a22-00c1252e3e05;
+
+ visits
+--------
+      1
+
+(1 rows)
+cqlsh:my_keyspace>
