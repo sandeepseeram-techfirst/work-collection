@@ -81,6 +81,8 @@ cqlsh:my_keyspace> SELECT emails FROM user WHERE first_name = 'Mary' AND last_na
  {'mary@example.com'}
 
 (1 rows)
+
+################################################################################################################ 
 cqlsh:my_keyspace> UPDATE user
                ...   SET emails = emails + {'mary.rodriguez.AZ@gmail.com' }
                ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
