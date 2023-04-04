@@ -104,3 +104,27 @@ cqlsh:my_keyspace> UPDATE user
 cqlsh:my_keyspace> 
 
 ################################################################################################################ 
+
+cqlsh:my_keyspace> ALTER TABLE user ADD phone_numbers list<text>;
+cqlsh:my_keyspace> UPDATE user SET phone_numbers = ['1-800-999-9999' ]
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT phone_numbers FROM user WHERE
+               ...   first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ phone_numbers
+--------------------
+ ['1-800-999-9999']
+
+(1 rows)
+cqlsh:my_keyspace> UPDATE user SET phone_numbers =
+               ...   phone_numbers + [ '480-111-1111' ]
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT phone_numbers FROM user WHERE
+               ...   first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ phone_numbers
+------------------------------------
+ ['1-800-999-9999', '480-111-1111']
+
+(1 rows)
+cqlsh:my_keyspace> 
