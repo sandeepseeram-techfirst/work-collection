@@ -102,3 +102,5 @@ cqlsh:my_keyspace> UPDATE user
                ...   SET emails = {}
                ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
 cqlsh:my_keyspace> 
+
+################################################################################################################ 
