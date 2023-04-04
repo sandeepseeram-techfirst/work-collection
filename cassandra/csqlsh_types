@@ -70,3 +70,32 @@ cqlsh:my_keyspace> UPDATE user_visits SET visits = visits + 1 WHERE user_id=ebf8
 cqlsh:my_keyspace>
 
 ################################################################################################################ 
+
+cqlsh:my_keyspace> ALTER TABLE user ADD emails set<text>;
+cqlsh:my_keyspace> UPDATE user SET emails = { 'mary@example.com' } 
+               ... WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT emails FROM user WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ emails
+----------------------
+ {'mary@example.com'}
+
+(1 rows)
+cqlsh:my_keyspace> UPDATE user
+               ...   SET emails = emails + {'mary.rodriguez.AZ@gmail.com' }
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT emails FROM user
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ emails
+-----------------------------------------------------
+ {'mary.rodriguez.AZ@gmail.com', 'mary@example.com'}
+
+(1 rows)
+cqlsh:my_keyspace> UPDATE user
+               ...   SET emails = emails - {'mary@example.com'}
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> UPDATE user
+               ...   SET emails = {}
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> 
