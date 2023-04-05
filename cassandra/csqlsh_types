@@ -128,3 +128,5 @@ cqlsh:my_keyspace> SELECT phone_numbers FROM user WHERE
 
 (1 rows)
 cqlsh:my_keyspace> 
+
+################################################################################################################
