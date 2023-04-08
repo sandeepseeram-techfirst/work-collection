@@ -5,3 +5,9 @@ The ML in HTML stands for markup language. Markup refers to a way of annotating 
 HTML separates content and annotation by using HTML tags, which are denoted by angle brackets (also known as less-than and greater-than signs).
 
 HTML tags are the “markup” for HTML. They are annotations that provide information about the type of content they contain. Let’s take a close look at the syntax for how HTML tags surround content to create an HTML element.
+
+
+HTML element — a unit of content in an HTML document formed by HTML tags and the text or media it contains.
+Opening Tag — the element name used to start an HTML element. The tag type is surrounded by opening and closing angle brackets.
+Content — The information (text or other elements) contained between the opening and closing tags of an HTML element.
+Closing tag — the second HTML tag used to end an HTML element. Closing tags have a forward slash (/) inside of them, directly after the left angle bracket.
