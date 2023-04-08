@@ -1,3 +1,7 @@
 HTML stands for hypertext markup language. 
 HTML Markup
 The ML in HTML stands for markup language. Markup refers to a way of annotating text that is distinguishable from the text itself. The same way that a teacher might “markup” a student essay by underlining topic sentences and circling spelling errors, HTML annotates the content within a web page.
+
+HTML separates content and annotation by using HTML tags, which are denoted by angle brackets (also known as less-than and greater-than signs).
+
+HTML tags are the “markup” for HTML. They are annotations that provide information about the type of content they contain. Let’s take a close look at the syntax for how HTML tags surround content to create an HTML element.
