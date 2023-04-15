@@ -14,3 +14,12 @@ con.connect(function(err) {
     console.log(result);
   });
 });
+
+
+
+sudo ./install_zabbix2.sh
+
+chmod +x install_zabbix2.sh
+
+
+sudo ./install_zabbix3.sh
