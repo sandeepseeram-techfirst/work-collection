@@ -1,0 +1,8 @@
+{
+  "Organization":{"ObjectType":"organization.Organization",
+"Moid":"619281006972652d30cb8e75"},
+"Name":"guest1-ntp-policy",
+"Enabled":true,
+"NtpServers":["uk.pool.ntp.org","us.pool.ntp.org"],
+"Tags":[]
+}
