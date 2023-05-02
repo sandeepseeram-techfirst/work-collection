@@ -1,4 +1,5 @@
- 
+# tidyverse contains the packages tidyr, ggplot2, dplyr,
+# readr, purrr and tibble
 install.packages("tidyverse")
 install.packages("lubridate")
 install.packages("readxl")
