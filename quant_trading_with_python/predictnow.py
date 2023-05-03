@@ -34,3 +34,9 @@ response = client.train(
  email=email,
  return_output=False,
 )
+print("FANTASTIC! YOUR FIRST-EVER MODEL TRAINING AT PREDICTNOW.AI HAS BEEN COMPLETED!")
+print(response)
+# User can now examine the train/test sets results from the model by calling the getresult function (and providing the name of the model that resides on Predictnow.ai server
+status = client.getstatus(username=username, train_id=response["train_id"])
+if status["state"] == "COMPLETED":
+ response = client.getresult(
