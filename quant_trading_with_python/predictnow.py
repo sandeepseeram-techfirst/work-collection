@@ -68,4 +68,7 @@ if status["state"] == "COMPLETED":
  eda="yes",
  prob_calib=params["prob_calib"],
   )
- 
+# FOR LIVE PREDICTION: (remember labels and  probabilities each can have many rows  corresponding to many combinations of parameters
+y_pred = pd.read_json(response.labels)
+ print("THE LABELS")
+ print(labels)
