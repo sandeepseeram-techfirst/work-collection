@@ -40,3 +40,17 @@ print(response)
 status = client.getstatus(username=username, train_id=response["train_id"])
 if status["state"] == "COMPLETED":
  response = client.getresult(
+
+model_name="test1",
+ username=username,
+  )
+  import pandas as pd
+  predicted_targets_cv = pd.read_json(response. predicted_targets_cv)
+  print("predicted_targets_cv")
+  print(predicted_targets_cv)
+  predicted_targets_test = pd.read_json(response. predicted_targets_test)
+  print("predicted_targets_test")
+  print(predicted_targets_test)
+  performance:metrics = pd.read_json(response. performance:metrics)
+  print("performance:metrics")
+  print(performance:metrics)
