@@ -54,3 +54,10 @@ model_name="test1",
   performance:metrics = pd.read_json(response. performance:metrics)
   print("performance:metrics")
   print(performance:metrics)
+
+# # Now we can make LIVE predictions for many combinations of the parameters by populating many rows in the example_input_live.csv file with these parameter combinations
+if status["state"] == "COMPLETED":
+  df = read_csv("example_input_live.csv") # Input data for live prediction
+  df.name = "myfirstpredictname" # optional, but  recommended
+
+ 
