@@ -60,4 +60,12 @@ if status["state"] == "COMPLETED":
   df = read_csv("example_input_live.csv") # Input data for live prediction
   df.name = "myfirstpredictname" # optional, but  recommended
 
+ # Making live predictions
+  response = client.predict(
+ model_name="test1",
+ input_df=df,
+ username=username,
+ eda="yes",
+ prob_calib=params["prob_calib"],
+  )
  
