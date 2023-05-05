@@ -24,3 +24,21 @@ df.sort_index(inplace=True)
 df.fillna(method='ffill', inplace=True)
 dailyret=df.pct_change() # note the rows of dailyret are the observations at different time periods
 positionsTable=np.zeros(df.shape)
+
+end_index = df.shape[0]
+#end_index = lookback + 10
+for t in np.arange(lookback+1,end_index):
+    R=dailyret.iloc[t-lookback+1:t,].T # here the columns of R are the different observations.
+    hasData=np.where(R.notna().all(axis=1))[0]
+    R.dropna(inplace=True) # avoid any stocks with missing returns
+    pca = PCA()
+    X = pca.fit_transform(R.T)[:, :numFactors]
+    X = sm.add_constant(X)
+    y1 = R.T
+    clf = MultiOutputRegressor(LinearRegression(fit_intercept=False),n_jobs=4).fit(X, y1)
+    Rexp = np.sum(clf.predict(X),axis=0)
+    R=dailyret.iloc[t-lookback+1:t+1,].T # here the columns of R are the different observations.
+
+    idxSort=Rexp.argsort() 
+
+ 
