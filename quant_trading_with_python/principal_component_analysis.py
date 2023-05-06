@@ -41,4 +41,9 @@ for t in np.arange(lookback+1,end_index):
 
     idxSort=Rexp.argsort() 
 
- 
+ positionsTable[t, hasData[idxSort[np.arange(0, topN)]]]=-1
+ # positionsTable[t, hasData[idxSort[np.arange(-topN,0)]]]=1
+ positionsTable[t, hasData[idxSort[np.arange(-topN, -1)]]] = 1
+capital=np.nansum(np.array(abs(pd.DataFrame(positionsTable)).shift()), axis=1)
+positionsTable[capital==0,]=0
+capital[capital==0]=1
