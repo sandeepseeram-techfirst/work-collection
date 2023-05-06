@@ -47,3 +47,7 @@ for t in np.arange(lookback+1,end_index):
 capital=np.nansum(np.array(abs(pd.DataFrame(positionsTable)).shift()), axis=1)
 positionsTable[capital==0,]=0
 capital[capital==0]=1
+ret=np.nansum(np.array(pd.DataFrame(positionsTable).shift())*np.array(dailyret), axis=1)/capital
+avgret=np.nanmean(ret)*252
+avgstdev = np.nanstd(ret)*math.sqrt(252)
+Sharpe = avgret/avgstdev
