@@ -51,3 +51,9 @@ ret=np.nansum(np.array(pd.DataFrame(positionsTable).shift())*np.array(dailyret),
 avgret=np.nanmean(ret)*252
 avgstdev = np.nanstd(ret)*math.sqrt(252)
 Sharpe = avgret/avgstdev
+print(avgret)
+print(avgstdev)
+print(Sharpe)
+#0.04052422056844459
+#0.07002908500498846
+#0.5786769963588398
