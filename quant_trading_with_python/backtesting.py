@@ -16,3 +16,6 @@ for m in range(13, monthlyRet.shape[0]):
     topN=np.floor(len(sortidx)/10).astype('int')
     positions[m-1, hasData[sortidx.values[np.arange(0, topN)]]]=-1
     positions[m-1, hasData[sortidx.values[np.arange(-topN,0)]]]=1
+capital=np.nansum(np.array(pd.DataFrame(abs(positions)).shift()), axis=1)
+capital[capital==0]=1
+ret=np.nansum(np.array(pd.DataFrame(positions).shift())*np.array(monthlyRet), axis=1)/capital
