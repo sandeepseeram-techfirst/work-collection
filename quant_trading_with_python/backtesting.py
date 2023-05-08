@@ -22,3 +22,5 @@ ret=np.nansum(np.array(pd.DataFrame(positions).shift())*np.array(monthlyRet), ax
 ret=np.delete(ret, np.arange(13))
 avgret=np.nanmean(ret)*12
 sharpe=np.sqrt(12)*np.nanmean(ret)/np.nanstd(ret)
+print('Avg ann return=%f Sharpe ratio=%f' % (avgret, sharpe))
+#Avg ann return=-0.012679 Sharpe ratio=-0.122247
