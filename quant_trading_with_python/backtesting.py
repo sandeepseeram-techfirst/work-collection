@@ -19,3 +19,6 @@ for m in range(13, monthlyRet.shape[0]):
 capital=np.nansum(np.array(pd.DataFrame(abs(positions)).shift()), axis=1)
 capital[capital==0]=1
 ret=np.nansum(np.array(pd.DataFrame(positions).shift())*np.array(monthlyRet), axis=1)/capital
+ret=np.delete(ret, np.arange(13))
+avgret=np.nanmean(ret)*12
+sharpe=np.sqrt(12)*np.nanmean(ret)/np.nanstd(ret)
