@@ -22,3 +22,10 @@ ENV VERSION=test
 # Do the build. Script is part of incoming sources.
 RUN build/build.sh
 
+# STAGE 2: Deployment
+FROM alpine
+
+USER nobody:nobody
+COPY --from=build /go/bin/kuard /kuard
+
+CMD [ "/kuard" ]
