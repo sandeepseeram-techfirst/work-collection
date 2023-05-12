@@ -2,3 +2,6 @@ $ kind create cluster --wait 5m
 $ export KUBECONFIG="$(kind get kubeconfig-path)"
 $ kubectl cluster-info
 $ kind delete cluster
+
+
+$ kubectl version
