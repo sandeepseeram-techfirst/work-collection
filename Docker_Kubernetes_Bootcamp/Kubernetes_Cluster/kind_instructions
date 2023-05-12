@@ -10,3 +10,5 @@ Points: The Kubernetes tools are backward- and forward-compatible with different
 Kubernetes API as long as you stay within two minor versions for both the tools and the cluster. 
 
 Kubernetes follows the semantic versioning specification, where the minor version is the middle number (e.g., the 18 in 1.18.2)
+
+$ kubectl get componentstatuses
