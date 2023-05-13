@@ -17,3 +17,12 @@ NAME                 STATUS    MESSAGE              ERROR
 scheduler            Healthy   ok
 controller-manager   Healthy   ok
 etcd-0               Healthy   {"health": "true"}
+
+
+$ kubectl describe nodes kube1
+
+Name:                   kube1
+Role:
+Labels:                 beta.kubernetes.io/arch=arm
+                        beta.kubernetes.io/os=linux
+                        kubernetes.io/hostname=node-1
