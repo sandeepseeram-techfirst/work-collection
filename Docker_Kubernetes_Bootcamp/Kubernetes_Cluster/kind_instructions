@@ -26,3 +26,18 @@ Role:
 Labels:                 beta.kubernetes.io/arch=arm
                         beta.kubernetes.io/os=linux
                         kubernetes.io/hostname=node-1
+
+
+System Info:
+  Machine ID:                 44d8f5dd42304af6acde62d233194cc6
+  System UUID:                c8ab697e-fc7e-28a2-7621-94c691120fb9
+  Boot ID:                    e78d015d-81c2-4876-ba96-106a82da263e
+  Kernel Version:             4.19.0-18-amd64
+  OS Image:                   Debian GNU/Linux 10 (buster)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://1.4.12
+  Kubelet Version:            v1.22.4
+  Kube-Proxy Version:         v1.22.4
+PodCIDR:                      10.244.1.0/24
+PodCIDRs:                     10.244.1.0/24
