@@ -55,3 +55,8 @@ Allocated resources:
   ------------  ----------      --------------- -------------
   260m (6%)     0 (0%)          140Mi (16%)     220Mi (25%)
 No events.
+
+
+$ kubectl get daemonSets --namespace=kube-system kube-proxy
+NAME         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR
+kube-proxy   5         5         5       5            5           ...   45d
