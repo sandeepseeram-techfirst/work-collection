@@ -41,3 +41,17 @@ System Info:
   Kube-Proxy Version:         v1.22.4
 PodCIDR:                      10.244.1.0/24
 PodCIDRs:                     10.244.1.0/24
+
+
+Non-terminated Pods:            (3 in total)
+  Namespace   Name        CPU Requests CPU Limits Memory Requests Memory Limits
+  ---------   ----        ------------ ---------- --------------- -------------
+  kube-system kube-dns...  260m (6%)    0 (0%)     140Mi (16%)     220Mi (25%)
+  kube-system kube-fla...  0 (0%)       0 (0%)     0 (0%)          0 (0%)
+  kube-system kube-pro...  0 (0%)       0 (0%)     0 (0%)          0 (0%)
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.
+  CPU Requests  CPU Limits      Memory Requests Memory Limits
+  ------------  ----------      --------------- -------------
+  260m (6%)     0 (0%)          140Mi (16%)     220Mi (25%)
+No events.
