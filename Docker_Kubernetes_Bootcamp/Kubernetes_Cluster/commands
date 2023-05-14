@@ -1,1 +1,3 @@
+This gets recorded in a kubectl configuration file, usually located at $HOME/.kube/config.  
+
 $ kubectl config set-context my-context --namespace=mystuff 
