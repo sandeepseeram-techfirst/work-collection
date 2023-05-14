@@ -4,3 +4,5 @@ $ kubectl config set-context my-context --namespace=mystuff
 
 
 $ kubectl config use-context my-context
+
+$ kubectl get pods,services
