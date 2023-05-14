@@ -60,3 +60,12 @@ No events.
 $ kubectl get daemonSets --namespace=kube-system kube-proxy
 NAME         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR
 kube-proxy   5         5         5       5            5           ...   45d
+
+
+$ kubectl get deployments --namespace=kube-system core-dns
+NAME       DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+core-dns   1         1         1            1           45d
+
+$ kubectl get services --namespace=kube-system core-dns
+NAME       CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
+core-dns   10.96.0.10   <none>  53/UDP,53/TCP   45d
