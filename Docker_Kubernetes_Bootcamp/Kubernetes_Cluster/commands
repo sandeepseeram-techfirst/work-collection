@@ -1,0 +1,1 @@
+$ kubectl config set-context my-context --namespace=mystuff 
