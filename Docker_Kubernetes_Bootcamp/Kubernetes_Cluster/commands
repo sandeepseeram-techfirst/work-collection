@@ -8,3 +8,5 @@ $ kubectl config use-context my-context
 $ kubectl get pods,services
 
 $ kubectl describe <resource-name> <obj-name>
+
+$ kubectl explain pods
