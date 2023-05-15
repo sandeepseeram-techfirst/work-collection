@@ -10,3 +10,5 @@ $ kubectl get pods,services
 $ kubectl describe <resource-name> <obj-name>
 
 $ kubectl explain pods
+
+$ kubectl apply -f obj.yaml
