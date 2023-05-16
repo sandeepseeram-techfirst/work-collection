@@ -29,3 +29,5 @@ If you don’t have bash or some other terminal available within your container,
 $ kubectl attach -it <pod-name>
 
 $ kubectl port-forward <pod-name> 8080:80
+
+$ kubectl get events
