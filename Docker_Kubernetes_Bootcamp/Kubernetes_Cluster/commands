@@ -14,4 +14,6 @@ $ kubectl explain pods
 $ kubectl apply -f obj.yaml
 
 
-use the --dry-run flag to print the objects to the terminal without actually sending them to the server.
+use the --dry-run flag to print the objects to the terminal without actually sending them to the server
+
+$ kubectl delete -f obj.yaml
