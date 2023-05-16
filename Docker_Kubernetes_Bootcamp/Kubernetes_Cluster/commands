@@ -31,3 +31,5 @@ $ kubectl attach -it <pod-name>
 $ kubectl port-forward <pod-name> 8080:80
 
 $ kubectl get events
+
+$ kubectl top nodes
