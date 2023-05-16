@@ -12,3 +12,6 @@ $ kubectl describe <resource-name> <obj-name>
 $ kubectl explain pods
 
 $ kubectl apply -f obj.yaml
+
+
+use the --dry-run flag to print the objects to the terminal without actually sending them to the server.
