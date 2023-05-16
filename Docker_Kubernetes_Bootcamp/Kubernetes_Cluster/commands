@@ -27,3 +27,5 @@ $ kubectl cp <pod-name>:</path/to/remote/file> </path/to/local/file>
 If you don’t have bash or some other terminal available within your container, you can always attach to the running process:
 
 $ kubectl attach -it <pod-name>
+
+$ kubectl port-forward <pod-name> 8080:80
