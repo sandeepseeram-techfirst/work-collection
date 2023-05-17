@@ -21,3 +21,5 @@ $ kubectl delete -f obj.yaml
 $ kubectl logs <pod-name>
 
 $ kubectl exec -it <pod-name> -- bash
+
+$ kubectl cp <pod-name>:</path/to/remote/file> </path/to/local/file>
