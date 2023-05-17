@@ -19,3 +19,5 @@ use the --dry-run flag to print the objects to the terminal without actually sen
 $ kubectl delete -f obj.yaml
 
 $ kubectl logs <pod-name>
+
+$ kubectl exec -it <pod-name> -- bash
