@@ -45,3 +45,4 @@ $ brew install bash-completion
 # CentOS/Red Hat
 $ yum install bash-completion
 
+$ kubectl describe pods kuard
