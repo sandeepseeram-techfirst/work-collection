@@ -35,3 +35,6 @@ $ kubectl get events
 $ kubectl top nodes
 
 $ kubectl top pods
+
+
+The kubectl tool can also be used to manage the cluster itself. The most common action that people take to manage their cluster is to cordon and drain a particular node. When you cordon a node, you prevent future Pods from being scheduled onto that machine. When you drain a node, you remove any Pods that are currently running on that machine. 
