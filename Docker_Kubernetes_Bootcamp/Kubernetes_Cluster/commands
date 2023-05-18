@@ -46,3 +46,7 @@ $ brew install bash-completion
 $ yum install bash-completion
 
 $ kubectl describe pods kuard
+
+$ kubectl delete -f kuard-pod.yaml
+
+$ kubectl logs kuard
