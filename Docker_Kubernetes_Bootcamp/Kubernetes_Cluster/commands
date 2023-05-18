@@ -50,3 +50,5 @@ $ kubectl describe pods kuard
 $ kubectl delete -f kuard-pod.yaml
 
 $ kubectl logs kuard
+
+$ kubectl exec kuard -- date
