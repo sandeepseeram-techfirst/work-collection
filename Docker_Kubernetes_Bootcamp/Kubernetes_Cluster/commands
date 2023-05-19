@@ -75,3 +75,18 @@ alpaca-test-1004512375-3r1m5      ... app=alpaca,env=test,ver=2,...
 bandicoot-prod-373860099-0t1gp    ... app=bandicoot,env=prod,ver=2,...
 bandicoot-prod-373860099-k2wcf    ... app=bandicoot,env=prod,ver=2,...
 bandicoot-staging-1839769971-3ndv ... app=bandicoot,env=staging,ver=2,...
+
+$ kubectl describe endpoints alpaca-prod
+
+Name:           alpaca-prod
+Namespace:      default
+Labels:         app=alpaca
+Subsets:
+  Addresses:            10.112.1.54,10.112.2.84,10.112.2.85
+  NotReadyAddresses:    <none>
+  Ports:
+    Name        Port    Protocol
+    ----        ----    --------
+    <unset>     8080    TCP
+
+No events.
