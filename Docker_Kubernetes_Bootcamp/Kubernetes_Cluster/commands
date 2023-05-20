@@ -90,3 +90,24 @@ Subsets:
     <unset>     8080    TCP
 
 No events.
+
+
+$ kubectl get ingress
+NAME             HOSTS               ADDRESS   PORTS   AGE
+host-ingress     alpaca.example.com            80      54s
+simple-ingress   *                             80      13m
+
+$ kubectl describe ingress host-ingress
+Name:             host-ingress
+Namespace:        default
+Address:
+Default backend:  be-default:8080 (<none>)
+Rules:
+  Host                Path  Backends
+  ----                ----  --------
+  alpaca.example.com
+                      /   alpaca:8080 (<none>)
+Annotations:
+  ...
+
+Events:  <none>
