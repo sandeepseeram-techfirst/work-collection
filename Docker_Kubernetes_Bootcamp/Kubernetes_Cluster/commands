@@ -122,3 +122,38 @@ Annotations:  <none>
 Replicas:     1 current / 1 desired
 Pods Status:  1 Running / 0 Waiting / 0 Succeeded / 0 Failed
 Pod Template:
+
+
+$ kubectl describe deployments kuard
+
+Name:                   kuard
+Namespace:              default
+CreationTimestamp:      Tue, 01 Jun 2021 21:19:46 -0700
+Labels:                 run=kuard
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               run=kuard
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 ...
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  run=kuard
+  Containers:
+   kuard:
+    Image:        gcr.io/kuar-demo/kuard-amd64:blue
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   kuard-6d69d9fc5c (2/2 replicas created)
+Events:
+  Type    Reason             Age                   From                 Message
+  ----    ------             ----                  ----                 -------
+  Normal  ScalingReplicaSet  4m6s                  deployment-con...    ...
+  Normal  ScalingReplicaSet  113s (x2 over 3m20s)  deployment-con...    ...
