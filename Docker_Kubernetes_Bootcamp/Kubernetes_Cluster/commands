@@ -157,3 +157,20 @@ Events:
   ----    ------             ----                  ----                 -------
   Normal  ScalingReplicaSet  4m6s                  deployment-con...    ...
   Normal  ScalingReplicaSet  113s (x2 over 3m20s)  deployment-con...    ...
+
+
+  $ kubectl rollout history deployment kuard --revision=2
+
+deployment.apps/kuard with revision #2
+Pod Template:
+  Labels:       pod-template-hash=54b74ddcd4
+        run=kuard
+  Annotations:  kubernetes.io/change-cause: Update to green kuard
+  Containers:
+   kuard:
+    Image:      gcr.io/kuar-demo/kuard-amd64:green
+    Port:       <none>
+    Host Port:  <none>
+    Environment:        <none>
+    Mounts:     <none>
+  Volumes:      <none>
