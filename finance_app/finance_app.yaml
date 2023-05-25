@@ -1,0 +1,170 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: main
+  namespace: default
+  selfLink: /apis/apps/v1/namespaces/default/deployments/main
+  uid: 2eb2c5b8-fe90-47fb-8e38-fefe73f99df6
+  resourceVersion: '5796585'
+  generation: 1
+  creationTimestamp: '2023-06-03T15:26:04Z'
+  labels:
+    app: main
+    version: v1
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"main","version":"v1"},"name":"main","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"main","version":"v1"}},"template":{"metadata":{"labels":{"app":"main","version":"v1"}},"spec":{"containers":[{"env":[{"name":"service_name","value":"main"}],"image":"registry.gitlab.com/arcadia-application/main-app/mainapp:latest","imagePullPolicy":"IfNotPresent","name":"main","ports":[{"containerPort":80,"protocol":"TCP"}]}]}}}}
+  managedFields:
+    - manager: kubectl-client-side-apply
+      operation: Update
+      apiVersion: apps/v1
+      time: '2023-06-03T15:26:04Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:kubectl.kubernetes.io/last-applied-configuration': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:version': {}
+        'f:spec':
+          'f:progressDeadlineSeconds': {}
+          'f:replicas': {}
+          'f:revisionHistoryLimit': {}
+          'f:selector':
+            'f:matchLabels':
+              .: {}
+              'f:app': {}
+              'f:version': {}
+          'f:strategy':
+            'f:rollingUpdate':
+              .: {}
+              'f:maxSurge': {}
+              'f:maxUnavailable': {}
+            'f:type': {}
+          'f:template':
+            'f:metadata':
+              'f:labels':
+                .: {}
+                'f:app': {}
+                'f:version': {}
+            'f:spec':
+              'f:containers':
+                'k:{"name":"main"}':
+                  .: {}
+                  'f:env':
+                    .: {}
+                    'k:{"name":"service_name"}':
+                      .: {}
+                      'f:name': {}
+                      'f:value': {}
+                  'f:image': {}
+                  'f:imagePullPolicy': {}
+                  'f:name': {}
+                  'f:ports':
+                    .: {}
+                    'k:{"containerPort":80,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                  'f:resources': {}
+                  'f:terminationMessagePath': {}
+                  'f:terminationMessagePolicy': {}
+              'f:dnsPolicy': {}
+              'f:restartPolicy': {}
+              'f:schedulerName': {}
+              'f:securityContext': {}
+              'f:terminationGracePeriodSeconds': {}
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: apps/v1
+      time: '2023-06-03T15:26:07Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:deployment.kubernetes.io/revision': {}
+        'f:status':
+          'f:availableReplicas': {}
+          'f:conditions':
+            .: {}
+            'k:{"type":"Available"}':
+              .: {}
+              'f:lastTransitionTime': {}
+              'f:lastUpdateTime': {}
+              'f:message': {}
+              'f:reason': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Progressing"}':
+              .: {}
+              'f:lastTransitionTime': {}
+              'f:lastUpdateTime': {}
+              'f:message': {}
+              'f:reason': {}
+              'f:status': {}
+              'f:type': {}
+          'f:observedGeneration': {}
+          'f:readyReplicas': {}
+          'f:replicas': {}
+          'f:updatedReplicas': {}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: main
+      version: v1
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: main
+        version: v1
+    spec:
+      containers:
+        - name: main
+          image: 'registry.gitlab.com/arcadia-application/main-app/mainapp:latest'
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: service_name
+              value: main
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
+status:
+  observedGeneration: 1
+  replicas: 1
+  updatedReplicas: 1
+  readyReplicas: 1
+  availableReplicas: 1
+  conditions:
+    - type: Available
+      status: 'True'
+      lastUpdateTime: '2023-06-03T15:26:07Z'
+      lastTransitionTime: '2023-06-03T15:26:07Z'
+      reason: MinimumReplicasAvailable
+      message: Deployment has minimum availability.
+    - type: Progressing
+      status: 'True'
+      lastUpdateTime: '2023-06-03T15:26:07Z'
+      lastTransitionTime: '2023-06-03T15:26:04Z'
+      reason: NewReplicaSetAvailable
+      message: ReplicaSet "main-5db4bb87c8" has successfully progressed.
