@@ -1,0 +1,40 @@
+{
+    "listeners":{
+      "*:8080":{
+        "pass":"routes/app"
+      }
+    },
+    "applications":{
+      "MainApp":{
+        "type":"php",
+        "root":"/www/",
+        "index": "index.html",
+        "options": {
+          "user": {
+            "display_errors": "1"
+          }
+        }
+      }
+    },
+    "routes": {
+      "app" : [
+        {
+          "match": {
+            "uri": ["/","*.php"]
+          },
+          "action": {
+            "pass" : "applications/MainApp"
+          }
+        },
+        {
+          "match": {
+            "uri": ["*"]
+          },
+          "action": {
+            "share" : "/www/"
+          }
+        }
+      ]
+    },
+    "access_log": "/var/log/access.log"
+  }
