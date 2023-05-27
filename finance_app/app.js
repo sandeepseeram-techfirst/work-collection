@@ -24,6 +24,7 @@ const AccountSchema = new mongoose.Schema({
   },
 });
 
+
 // Create the `accounts` collection
 const Account = mongoose.model("Account", AccountSchema);
 
