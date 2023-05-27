@@ -108,3 +108,20 @@ if (($account_list[$_POST["account"]]['amount'] - $my_amount)>=0)
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonDataEncoded);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 	$result = curl_exec($ch);
+
+
+//	$myfile = fopen("money_transfer.json", "w") or die("Unable to open file!");
+//	fwrite($myfile, json_encode($my_new_array));
+//	fclose($myfile);
+
+
+}
+else
+{
+	echo '{"name":"'.$_POST["friend"].'", "status":"failed","amount":"'.$_POST["amount"].'", "currency":"'.$_POST["currency"].'", "transid":"'.$my_trans_id.'", "msg":"Not sufficient funds for the money transfer "}';
+}
+
+
+
+
+?>
