@@ -6,5 +6,5 @@ class MoneyTransfer:
         sender.withdraw(amount)
         receiver.deposit(amount)
     
-    def __str__(self):
-        return f"transfer_money {self.trans_id} with amount {transaction.amount}"
+#   def __str__(self):
+#       return f"transfer_money {self.trans_id} with amount {transaction.amount}"
