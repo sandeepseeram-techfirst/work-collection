@@ -9,5 +9,5 @@ class Stock:
         self.price += random.uniform(-1, 1)
 
 
-    #def __str__(self):
-    #    return f"Stock {self.stock_id} with price {self.price}"
+    def __str__(self):
+        return f"Stock {self.stock_id} with price {self.price}"
