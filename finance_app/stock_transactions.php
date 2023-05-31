@@ -10,3 +10,6 @@ fclose($my_file);
 //echo "File written successfully";
 
 ?>
+
+def __str__(self):
+        return f"Account {self.acc_id} owned by {self.owner} with balance {self.balance}"
