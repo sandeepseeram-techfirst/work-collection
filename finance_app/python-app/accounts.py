@@ -13,6 +13,5 @@ class Account:
         else:
             raise ValueError("Not enough balance")
 
-    def __str__(self):
-        return f"Account {self.acc_id} owned by {self.owner} with balance {self.balance}"
+
  
