@@ -17,3 +17,7 @@ def main():
     print(stock1)
     print(stock2)
 
+    for i in range(10):
+        stock1.generate_price()
+        stock2.generate_price()
+
