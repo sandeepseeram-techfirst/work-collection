@@ -12,4 +12,8 @@ def main():
     print(acc1)
     print(acc2)
 
- 
+    stock1 = Stock("AAPL", 150)
+    stock2 = Stock("GOOGL", 1000)
+    print(stock1)
+    print(stock2)
+
