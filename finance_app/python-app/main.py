@@ -8,4 +8,8 @@ def main():
     print(acc1)
     print(acc2)
 
+    MoneyTransfer.transfer_money(acc1, acc2, 500)
+    print(acc1)
+    print(acc2)
+
  
