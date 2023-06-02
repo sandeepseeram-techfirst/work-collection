@@ -21,3 +21,8 @@ def main():
         stock1.generate_price()
         stock2.generate_price()
 
+    print(stock1)
+    print(stock2)
+
+if __name__ == "__main__":
+    main()
