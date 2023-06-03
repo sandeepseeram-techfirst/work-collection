@@ -1,0 +1,8 @@
+JavaScript uses functions, which are reusable blocks of code designed to perform a specific task.
+
+
+1. Functions allow us to write a chunk of code once that can be reused over and over.
+2. Events allow JavaScript to respond to user behaviors, like the user hovering their mouse over an HTML element or resizing their window.
+
+
+Events and functions combine to give JavaScript the ability to create interactive experiences. When an event is fired, a function is executed. This pattern is used again and again in web development to create interactive websites.

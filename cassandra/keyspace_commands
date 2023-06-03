@@ -1,0 +1,94 @@
+cqlsh> 
+cqlsh> CREATE KEYSPACE my_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1 };
+cqlsh> 
+
+###############################################################################################################
+
+cqlsh> DESCRIBE KEYSPACE my_keyspace;
+
+CREATE KEYSPACE my_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+
+cqlsh> 
+
+################################################################################################################
+
+cqlsh> USE my_keyspace;
+cqlsh:my_keyspace>
+
+################################################################################################################
+cqlsh:my_keyspace> CREATE TABLE user (first_name text, last_name text, title text, PRIMARY KEY (last_name, first_name));
+cqlsh:my_keyspace> 
+
+
+################################################################################################################
+cqlsh:my_keyspace> CREATE TABLE user (first_name text, last_name text, title text, PRIMARY KEY (last_name, first_name));
+cqlsh:my_keyspace> INSERT INTO user (first_name, last_name, title) VALUES ('Bill', 'Nguyen', 'Mr.');
+cqlsh:my_keyspace> 
+
+################################################################################################################
+cqlsh:my_keyspace> SELECT * FROM user WHERE first_name='Bill' AND last_name='Nguyen';
+
+ last_name | first_name | title
+-----------+------------+-------
+    Nguyen |       Bill |   Mr.
+
+(1 rows)
+cqlsh:my_keyspace> 
+################################################################################################################
+
+cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
+
+ last_name | first_name | title
+-----------+------------+-------
+    Nguyen |       Bill |   Mr.
+
+(1 rows)
+cqlsh:my_keyspace> 
+
+################################################################################################################
+
+cqlsh:my_keyspace> SELECT * FROM user where first_name = 'Bill';
+InvalidRequest: Error from server: code=2200 [Invalid query] message="Cannot execute this query as it might involve data filtering and thus may have unpredictable performance. If you want to execute this query despite the performance unpredictability, use ALLOW FILTERING"
+cqlsh:my_keyspace> 
+
+################################################################################################################
+
+cqlsh:my_keyspace> SELECT COUNT (*) FROM user;
+
+ count
+-------
+     1
+
+(1 rows)
+
+Warnings :
+Aggregation query used without partition key
+
+################################################################################################################
+
+cqlsh:my_keyspace> DELETE title FROM USER WHERE first_name='Bill' AND last_name='Nguyen';
+cqlsh:my_keyspace> 
+
+################################################################################################################
+
+cqlsh:my_keyspace> SELECT * FROM user WHERE first_name='Bill' AND last_name='Nguyen';
+
+ last_name | first_name | title
+-----------+------------+-------
+    Nguyen |       Bill |  null
+
+(1 rows)
+cqlsh:my_keyspace> 
+
+################################################################################################################
+cqlsh:my_keyspace> DELETE FROM USER WHERE first_name='Bill' AND last_name='Nguyen';
+cqlsh:my_keyspace> SELECT * FROM user WHERE first_name='Bill' AND last_name='Nguyen';
+
+ last_name | first_name | title
+-----------+------------+-------
+
+(0 rows)
+cqlsh:my_keyspace> 
+################################################################################################################
+
+

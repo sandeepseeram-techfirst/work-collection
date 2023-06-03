@@ -1,0 +1,1 @@
+An attribute in HTML provides additional information about an HTML element. It comes in a name and value pair with the structure name="value". For example, you can specify the width of an HTML element with the attribute width="500".

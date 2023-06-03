@@ -1,0 +1,5 @@
+example.com {
+    root /var/www/html
+    gzip
+    log /var/log/caddy/access.log 
+}

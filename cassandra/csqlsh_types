@@ -1,0 +1,132 @@
+Connected to Test Cluster at 127.0.0.1:9042.
+[cqlsh 5.0.1 | Cassandra 4.0-alpha4 | CQL spec 3.4.5 | Native protocol v4]
+Use HELP for help.
+cqlsh> 
+cqlsh> CREATE KEYSPACE my_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+cqlsh> CREATE TABLE my_keyspace.user (first_name text, last_name text, title text, PRIMARY KEY (last_name, first_name));
+cqlsh> USE my_keyspace;
+cqlsh:my_keyspace> 
+
+################################################################################################################ 
+
+cqlsh:my_keyspace> INSERT INTO user (first_name, last_name, title) VALUES ('Bill', 'Nguyen', 'Mr.');
+cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
+
+ last_name | first_name | title
+-----------+------------+-------
+    Nguyen |       Bill |   Mr.
+
+(1 rows)
+cqlsh:my_keyspace> 
+
+################################################################################################################ 
+
+cqlsh:my_keyspace> ALTER TABLE user ADD logins int;
+cqlsh:my_keyspace> UPDATE user SET logins = 1 WHERE first_name = 'Bill' AND last_name = 'Nguyen';
+cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
+
+ last_name | first_name | logins | title
+-----------+------------+--------+-------
+    Nguyen |       Bill |      1 |   Mr.
+
+(1 rows)
+cqlsh:my_keyspace> 
+
+################################################################################################################
+
+cqlsh:my_keyspace> ALTER TABLE user ADD account_created timestamp;
+cqlsh:my_keyspace> UPDATE user SET account_created = '2015-06-15T20:05:07-0700' WHERE first_name = 'Bill' AND last_name = 'Nguyen';
+cqlsh:my_keyspace> UPDATE user SET account_created = currentTimestamp() WHERE first_name = 'Bill' AND last_name = 'Nguyen';
+cqlsh:my_keyspace> SELECT * FROM user where last_name = 'Nguyen';
+
+ last_name | first_name | account_created                 | logins | title
+-----------+------------+---------------------------------+--------+-------
+    Nguyen |       Bill | 2023-05-29 08:54:25.429000+0000 |      1 |   Mr.
+
+(1 rows)
+cqlsh:my_keyspace> 
+
+################################################################################################################ 
+
+cqlsh:my_keyspace> ALTER TABLE user ADD id uuid;
+cqlsh:my_keyspace> UPDATE user SET id = uuid() WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT first_name, id FROM user WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ first_name | id
+------------+--------------------------------------
+       Mary | 0b2f0797-e13c-4014-81bd-998ccbfb4aa5
+
+(1 rows)
+################################################################################################################ 
+
+cqlsh:my_keyspace> CREATE TABLE user_visits (user_id uuid PRIMARY KEY, visits counter);
+cqlsh:my_keyspace> UPDATE user_visits SET visits = visits + 1 WHERE user_id=ebf87fee-b372-4104-8a22-00c1252e3e05;cqlsh:my_keyspace> SELECT visits from user_visits WHERE user_id=ebf87fee-b372-4104-8a22-00c1252e3e05;
+
+ visits
+--------
+      1
+
+(1 rows)
+cqlsh:my_keyspace>
+
+################################################################################################################ 
+
+cqlsh:my_keyspace> ALTER TABLE user ADD emails set<text>;
+cqlsh:my_keyspace> UPDATE user SET emails = { 'mary@example.com' } 
+               ... WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT emails FROM user WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ emails
+----------------------
+ {'mary@example.com'}
+
+(1 rows)
+
+################################################################################################################ 
+cqlsh:my_keyspace> UPDATE user
+               ...   SET emails = emails + {'mary.rodriguez.AZ@gmail.com' }
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT emails FROM user
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ emails
+-----------------------------------------------------
+ {'mary.rodriguez.AZ@gmail.com', 'mary@example.com'}
+
+(1 rows)
+################################################################################################################ 
+cqlsh:my_keyspace> UPDATE user
+               ...   SET emails = emails - {'mary@example.com'}
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> UPDATE user
+               ...   SET emails = {}
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> 
+
+################################################################################################################ 
+
+cqlsh:my_keyspace> ALTER TABLE user ADD phone_numbers list<text>;
+cqlsh:my_keyspace> UPDATE user SET phone_numbers = ['1-800-999-9999' ]
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT phone_numbers FROM user WHERE
+               ...   first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ phone_numbers
+--------------------
+ ['1-800-999-9999']
+
+(1 rows)
+cqlsh:my_keyspace> UPDATE user SET phone_numbers =
+               ...   phone_numbers + [ '480-111-1111' ]
+               ...   WHERE first_name = 'Mary' AND last_name = 'Rodriguez';
+cqlsh:my_keyspace> SELECT phone_numbers FROM user WHERE
+               ...   first_name = 'Mary' AND last_name = 'Rodriguez';
+
+ phone_numbers
+------------------------------------
+ ['1-800-999-9999', '480-111-1111']
+
+(1 rows)
+cqlsh:my_keyspace> 
+
+################################################################################################################ 

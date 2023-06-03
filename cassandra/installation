@@ -1,0 +1,15 @@
+$ wget http://archive.apache.org/dist/cassandra/4.0-alpha4/apache-cassandra-4.0-alpha4-bin.tar.gz
+
+--2023-05-29 07:55:11--  http://archive.apache.org/dist/cassandra/4.0-alpha4/apache-cassandra-4.0-alpha4-bin.tar.gz
+Resolving archive.apache.org (archive.apache.org)... 65.108.204.189, 2a01:4f9:1a:a084::2
+Connecting to archive.apache.org (archive.apache.org)|65.108.204.189|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 48720794 (46M) [application/x-gzip]
+Saving to: ‘apache-cassandra-4.0-alpha4-bin.tar.gz’
+
+apache-cassandra-4.0-alpha4- 100%[===========================================>]  46.46M  67.7MB/s    in 0.7s    
+
+2023-05-29 07:55:12 (67.7 MB/s) - ‘apache-cassandra-4.0-alpha4-bin.tar.gz’ saved [48720794/48720794]
+
+
+# tar xvzf apache-cassandra-4.0-alpha4-bin.tar.gz 
