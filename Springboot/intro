@@ -1,0 +1,51 @@
+$ java -version
+java version "17.0.1" 2021-10-19 LTS
+Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-LTS-39, mixed mode, sharing)
+$
+
+
+Dependencies: Web, DevTools, etc.
+Programming language: Java, Groovy, or Kotlin
+Java version: 16, 11, 12
+Project type: Maven, Gradle
+Packaging: packaging JAR, WAR
+Metadata: Group, Artifact, Name, Description, and Package Name
+
+
+$ curl https://start.spring.io/starter.zip -d dependencies=web -d type=maven-project -d bootVersion=2.7.6 -o demo.zip
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 67002  100 66949  100    53   172k    140 --:--:-- --:--:-- --:--:--  172k
+$ 
+
+$ unzip demo.zip -d . && rm demo.zip
+Archive:  demo.zip
+  inflating: ./pom.xml               
+   creating: ./src/
+   creating: ./src/test/
+   creating: ./src/test/java/
+   creating: ./src/test/java/com/
+   creating: ./src/test/java/com/example/
+   creating: ./src/test/java/com/example/demo/
+  inflating: ./src/test/java/com/example/demo/DemoApplicationTests.java  
+   creating: ./src/main/
+   creating: ./src/main/java/
+   creating: ./src/main/java/com/
+   creating: ./src/main/java/com/example/
+   creating: ./src/main/java/com/example/demo/
+  inflating: ./src/main/java/com/example/demo/DemoApplication.java  
+   creating: ./src/main/resources/
+   creating: ./src/main/resources/templates/
+   creating: ./src/main/resources/static/
+  inflating: ./src/main/resources/application.properties  
+  inflating: ./HELP.md               
+  inflating: ./.gitignore            
+   creating: ./.mvn/
+   creating: ./.mvn/wrapper/
+  inflating: ./.mvn/wrapper/maven-wrapper.properties  
+  inflating: ./.mvn/wrapper/maven-wrapper.jar  
+  inflating: ./mvnw                  
+  inflating: ./mvnw.cmd              
+$ 
