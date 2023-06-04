@@ -1,0 +1,22 @@
+.mvn/
+mvnw.cmd
+HELP.md
+mvnw
+pom.xml
+src
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── example
+│   │           └── demo
+│   │               └── DemoApplication.java
+│   └── resources
+│       ├── application.properties
+│       ├── static
+│       └── templates
+└── test
+    └── java
+        └── com
+            └── example
+                └── demo
+                    └── DemoApplicationTests.java
