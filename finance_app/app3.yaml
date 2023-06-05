@@ -1,0 +1,61 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: app2
+  namespace: default
+  selfLink: /api/v1/namespaces/default/services/app2
+  uid: cacd2c65-3d79-4dc3-9abe-c2d045c39dbe
+  resourceVersion: '5796499'
+  creationTimestamp: '2023-06-03T15:26:04Z'
+  labels:
+    app: app2
+    service: app2
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"app2","service":"app2"},"name":"app2","namespace":"default"},"spec":{"ports":[{"name":"app2-80","nodePort":30362,"port":80}],"selector":{"app":"app2"},"type":"NodePort"}}
+  managedFields:
+    - manager: kubectl-client-side-apply
+      operation: Update
+      apiVersion: v1
+      time: '2023-06-03T15:26:04Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:kubectl.kubernetes.io/last-applied-configuration': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:service': {}
+        'f:spec':
+          'f:externalTrafficPolicy': {}
+          'f:ports':
+            .: {}
+            'k:{"port":80,"protocol":"TCP"}':
+              .: {}
+              'f:name': {}
+              'f:nodePort': {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+          'f:selector':
+            .: {}
+            'f:app': {}
+          'f:sessionAffinity': {}
+          'f:type': {}
+spec:
+  ports:
+    - name: app2-80
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30362
+  selector:
+    app: app2
+  clusterIP: 10.110.192.48
+  type: NodePort
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+status:
+  loadBalancer: {}

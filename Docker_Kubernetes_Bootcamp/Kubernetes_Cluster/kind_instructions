@@ -1,0 +1,71 @@
+$ kind create cluster --wait 5m
+$ export KUBECONFIG="$(kind get kubeconfig-path)"
+$ kubectl cluster-info
+$ kind delete cluster
+
+
+$ kubectl version
+
+Points: The Kubernetes tools are backward- and forward-compatible with different versions of the 
+Kubernetes API as long as you stay within two minor versions for both the tools and the cluster. 
+
+Kubernetes follows the semantic versioning specification, where the minor version is the middle number (e.g., the 18 in 1.18.2)
+
+$ kubectl get componentstatuses
+
+NAME                 STATUS    MESSAGE              ERROR
+scheduler            Healthy   ok
+controller-manager   Healthy   ok
+etcd-0               Healthy   {"health": "true"}
+
+
+$ kubectl describe nodes kube1
+
+Name:                   kube1
+Role:
+Labels:                 beta.kubernetes.io/arch=arm
+                        beta.kubernetes.io/os=linux
+                        kubernetes.io/hostname=node-1
+
+
+System Info:
+  Machine ID:                 44d8f5dd42304af6acde62d233194cc6
+  System UUID:                c8ab697e-fc7e-28a2-7621-94c691120fb9
+  Boot ID:                    e78d015d-81c2-4876-ba96-106a82da263e
+  Kernel Version:             4.19.0-18-amd64
+  OS Image:                   Debian GNU/Linux 10 (buster)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://1.4.12
+  Kubelet Version:            v1.22.4
+  Kube-Proxy Version:         v1.22.4
+PodCIDR:                      10.244.1.0/24
+PodCIDRs:                     10.244.1.0/24
+
+
+Non-terminated Pods:            (3 in total)
+  Namespace   Name        CPU Requests CPU Limits Memory Requests Memory Limits
+  ---------   ----        ------------ ---------- --------------- -------------
+  kube-system kube-dns...  260m (6%)    0 (0%)     140Mi (16%)     220Mi (25%)
+  kube-system kube-fla...  0 (0%)       0 (0%)     0 (0%)          0 (0%)
+  kube-system kube-pro...  0 (0%)       0 (0%)     0 (0%)          0 (0%)
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.
+  CPU Requests  CPU Limits      Memory Requests Memory Limits
+  ------------  ----------      --------------- -------------
+  260m (6%)     0 (0%)          140Mi (16%)     220Mi (25%)
+No events.
+
+
+$ kubectl get daemonSets --namespace=kube-system kube-proxy
+NAME         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR
+kube-proxy   5         5         5       5            5           ...   45d
+
+
+$ kubectl get deployments --namespace=kube-system core-dns
+NAME       DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+core-dns   1         1         1            1           45d
+
+$ kubectl get services --namespace=kube-system core-dns
+NAME       CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
+core-dns   10.96.0.10   <none>  53/UDP,53/TCP   45d
