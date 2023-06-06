@@ -9,7 +9,7 @@ spec:
       labels:
         app: dictionary-server
     spec:
-      containers:
+      containers: 
       - name: server
         image: brendanburns/dictionary-server
         ports:
