@@ -44,7 +44,7 @@ func main() {
     }
     f, err := div(a, b)
     if err != nil {
-        fmt.Println("dividing failed:", err)
+        fmt.Println("dividing failed:", err)``
     } else {
         fmt.Println(f)
     }
