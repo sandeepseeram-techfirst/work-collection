@@ -1,0 +1,13 @@
+var (
+	name     string = "Prince Oberyn"
+	age      int    =  32
+	location string = "Dorne"
+)
+
+If an initializer is present, the type can be omitted, the variable will take the type of the initializer (inferred typing).
+
+var (
+	name     = "Prince Oberyn"
+	age      =  32
+	location = "Dorne"
+)
