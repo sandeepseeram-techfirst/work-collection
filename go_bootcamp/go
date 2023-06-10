@@ -19,6 +19,6 @@ func main() {
 	}
 	action()
 }
-
+ 
 
 While you can print the value of a variable or constant using the built-in print and println functions, the more idiomatic and flexible way is to use the fmt package
