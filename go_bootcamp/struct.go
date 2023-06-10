@@ -17,7 +17,7 @@ func main() {
   pers1.age = 45
   pers1.job = "Teacher"
   pers1.salary = 6000
-
+ 
   // Pers2 specification
   pers2.name = "Cecilie"
   pers2.age = 24
