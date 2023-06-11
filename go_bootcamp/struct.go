@@ -11,7 +11,7 @@ type Person struct {
 func main() {
   var pers1 Person
   var pers2 Person
-
+ 
   // Pers1 specification
   pers1.name = "Hege"
   pers1.age = 45
