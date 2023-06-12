@@ -4,7 +4,7 @@ import "fmt"
 
 func location(city string) (string, string) {
 	var region string
-	var continent string
+	var continent string 
 
 	switch city {
 	case "Los Angeles", "LA", "Santa Monica":
