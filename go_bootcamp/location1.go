@@ -13,7 +13,7 @@ func location(city string) (region, continent string) {
 	return //returning region and continent
 }
 
-func main() {
+func main() { 
 	region, continent := location("Santa Monica")
 	fmt.Printf("Matt lives in %s, %s", region, continent)
 }
