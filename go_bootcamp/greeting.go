@@ -9,7 +9,7 @@ const (
 )
 
 func main() {
-	const Greeting = "ハローワールド" //declaring a constant
+	const Greeting = "ハローWelcomeワールド" //declaring a constant
 	fmt.Println(Greeting)
 	fmt.Println(Pi)
 	fmt.Println(Truth)
