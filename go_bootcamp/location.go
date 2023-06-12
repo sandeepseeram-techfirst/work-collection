@@ -20,4 +20,4 @@ func location(city string) (string, string) {
 func main() {
 	region, continent := location("Santa Monica")
 	fmt.Printf("Matt lives in %s, %s", region, continent)
-}
+} 
