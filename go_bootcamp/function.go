@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 type Artist struct {
-	Name, Genre string
+	Name, Genre string 
 	Songs       int
 }
  
