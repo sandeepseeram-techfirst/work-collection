@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 func location(city string) (region, continent string) {
-	switch city {
+	switch city { 
 	case "Los Angeles", "LA", "Santa Monica":
 		region, continent = "California", "North America"
 	case "New York", "NYC":
@@ -11,7 +11,7 @@ func location(city string) (region, continent string) {
 		region, continent = "Unknown", "Unknown"
 	}
 	return //returning region and continent
-}
+} 
 
 func main() { 
 	region, continent := location("Santa Monica")
