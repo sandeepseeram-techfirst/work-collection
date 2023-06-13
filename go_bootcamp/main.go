@@ -6,3 +6,4 @@ func main() {
 	age := 32
 	fmt.Printf("%s age %d from %s ", name, age, location)
 } 
+ 
