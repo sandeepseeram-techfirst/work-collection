@@ -8,7 +8,7 @@ type Artist struct {
 
 func newRelease(a *Artist) int { //passing an Artist by reference
 	a.Songs++
-	return a.Songs
+	return a.Songs 
 }
 
 func main() {
