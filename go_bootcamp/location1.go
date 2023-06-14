@@ -1,6 +1,6 @@
 package main
 import "fmt"
-
+ 
 func location(city string) (region, continent string) {
 	switch city { 
 	case "Los Angeles", "LA", "Santa Monica":
