@@ -4,7 +4,7 @@ import "fmt"
 type Artist struct {
 	Name, Genre string
 	Songs       int
-}
+} 
 
 func newRelease(a *Artist) int { //passing an Artist by reference
 	a.Songs++
