@@ -9,7 +9,7 @@ func location(city string) (region, continent string) {
 		region, continent = "New York", "North America"
 	default:
 		region, continent = "Unknown", "Unknown"
-	}
+	} 
 	return //returning region and continent
 } 
 
