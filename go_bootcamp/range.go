@@ -8,4 +8,4 @@ func main() {
     for i, v := range pow { //loops over the length of pow
         fmt.Printf("2**%d = %d\n", i, v)
     }
-} 
+}  
