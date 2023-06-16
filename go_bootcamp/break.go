@@ -12,4 +12,4 @@ func main() {
 	}
 	fmt.Println(pow)
 	// [1 2 4 8 16 0 0 0 0 0]
-}  
+}
