@@ -13,3 +13,8 @@ import (
 		i = 12
 		f = 14.53
 		)
+
+# Pointers
+
+var x int = 5
+var xptr = &x
