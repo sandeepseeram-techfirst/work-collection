@@ -1,0 +1,9 @@
+import (
+ "database/sql"
+ _ "github.com/go-sql-driver/mysql"
+)
+
+import (
+	"fmt"
+	"math/rand"
+	)
