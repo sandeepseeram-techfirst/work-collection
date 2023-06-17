@@ -7,3 +7,9 @@ import (
 	"fmt"
 	"math/rand"
 	)
+
+	var (
+		s = "mystring"
+		i = 12
+		f = 14.53
+		)
