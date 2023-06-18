@@ -18,3 +18,10 @@ import (
 
 var x int = 5
 var xptr = &x
+
+
+#Functions
+
+func main(){
+	//do something
+	}
