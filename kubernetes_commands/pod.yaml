@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: server-app
+  namespace: secure
+spec:
+  containers:
+  - image: nginx:1.23.3
+    name: nginx
+    volumeMounts:
+    - name: auth-volume
+      mountPath: /var/data
+      readOnly: true
+  restartPolicy: Never
+  volumes:
+  - name: auth-volume
+    secret:
+      secretName: api-basic-auth
