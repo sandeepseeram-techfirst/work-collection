@@ -9,5 +9,5 @@ public class Main {
     
     String formattedDate = myDateObj.format(myFormatObj);  
     System.out.println("After formatting: " + formattedDate);  
-  }  
+  }   
 } 
