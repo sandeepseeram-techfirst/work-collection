@@ -10,3 +10,5 @@ public class Main {
     System.out.println(cars);
   } 
 }
+
+//  output will be like this [Volvo, BMW, Ford, Mazda]
