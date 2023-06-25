@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: audited
   labels:
-    pod-security.kubernetes.io/warn: baseline
+    pod-security.kubernetes.io/warn: baseline 
