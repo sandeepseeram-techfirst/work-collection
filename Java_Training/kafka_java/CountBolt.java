@@ -9,7 +9,7 @@ import backtype.storm.task.TopologyContext;
 
 public class CountBolt implements IRichBolt{
    Map<String, Integer> counters;
-   private OutputCollector collector;
+   private OutputCollector collector; 
    
    @Override
    public void prepare(Map stormConf, TopologyContext context,
