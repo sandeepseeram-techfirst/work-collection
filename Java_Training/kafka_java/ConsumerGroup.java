@@ -2,7 +2,7 @@ import java.util.Properties;
 import java.util.Arrays;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecord; 
 
 public class ConsumerGroup {
    public static void main(String[] args) throws Exception {
