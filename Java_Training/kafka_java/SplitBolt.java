@@ -31,7 +31,7 @@ public class SplitBolt implements IRichBolt {
             collector.emit(new Values(word));
          }
          
-      }
+      } 
 
       collector.ack(input);
    }
