@@ -48,5 +48,5 @@ public class SplitBolt implements IRichBolt {
    public Map<String, Object> getComponentConfiguration() {
       return null;
    }
-   
+    
 }
