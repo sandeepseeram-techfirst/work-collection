@@ -14,7 +14,7 @@ public class CountBolt implements IRichBolt{
    @Override
    public void prepare(Map stormConf, TopologyContext context,
    OutputCollector collector) {
-      this.counters = new HashMap<String, Integer>();
+      this.counters = new HashMap<String, Integer>(); 
       this.collector = collector;
    }
 
