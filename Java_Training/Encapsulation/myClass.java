@@ -3,5 +3,5 @@ public class Main {
     Person myObj = new Person();
     myObj.setName("John");
     System.out.println(myObj.getName());
-  }
+  } 
 }
