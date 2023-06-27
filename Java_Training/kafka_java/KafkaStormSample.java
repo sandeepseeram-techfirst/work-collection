@@ -24,7 +24,7 @@ public class KafkaStormSample {
       config.put(Config.TOPOLOGY_MAX_SPOUT_PENDING, 1);
       String zkConnString = "localhost:2181";
       String topic = "my-first-topic";
-      BrokerHosts hosts = new ZkHosts(zkConnString);
+      BrokerHosts hosts = new ZkHosts(zkConnString); 
       
       SpoutConfig kafkaSpoutConfig = new SpoutConfig (hosts, topic, "/" + topic,    
          UUID.randomUUID().toString());
