@@ -1,0 +1,9 @@
+<plugin>
+  <groupId>com.google.cloud.tools</groupId>
+  <artifactId>appengine-maven-plugin</artifactId>
+  <version>2.2.0</version>
+  <configuration>
+    <version>1</version>
+    <deploy.projectId>GCLOUD_CONFIG</deploy.projectId>
+  </configuration>
+</plugin>
