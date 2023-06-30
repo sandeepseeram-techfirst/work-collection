@@ -1,0 +1,5 @@
+# Maven Wrapper Spring-Boot Run Command 
+
+./mvnw spring-boot:run \
+  -Dspring-boot.run.jvmArguments="-Dspring.profiles.active=cloud \
+  -Dspring.cloud.gcp.credentials.location=file:///$HOME/service-account.json" 
