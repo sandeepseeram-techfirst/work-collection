@@ -6,9 +6,10 @@ public class BankAccount {
         double updatedBalance = balance - amountToWithdraw;
         double amountForEachFriend = updatedBalance / 3;
 
-        boolean canPurchaseTicket = amountForEachFriend >= 250;
         System.out.println("Updated balance: " + updatedBalance);
         System.out.println("Amount for each friend: " + amountForEachFriend);
-        System.out.println("Can purchase ticket: " + canPurchaseTicket);
+        System.out.println("Can purchase ticket: " + (amountForEachFriend >= 250));
+
+        System.out.println("I gave each friend " + amountForEachFriend + "...");
     }
 }
