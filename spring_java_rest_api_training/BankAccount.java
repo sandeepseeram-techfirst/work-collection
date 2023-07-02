@@ -13,3 +13,4 @@ public class BankAccount {
         System.out.println("I gave each friend " + amountForEachFriend + "...");
     }
 }
+ 
