@@ -12,7 +12,7 @@ public class SavingsAccount {
     //Check balance:
     System.out.println("Hello!");
     System.out.println("Your balance is "+savings.balance);
-    
+     
     //Withdrawing:
     int afterWithdraw = savings.balance - 300;
     savings.balance = afterWithdraw;
