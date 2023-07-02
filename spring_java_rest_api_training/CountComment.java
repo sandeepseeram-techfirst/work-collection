@@ -7,4 +7,4 @@ public class CountComment {
         int numComments = 6;
         System.out.println("Number of comments: " + numComments);
     }
-}
+} 
