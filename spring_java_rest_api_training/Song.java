@@ -3,4 +3,4 @@ public class Song {
         String openingLyrics = "Yesterday, all my troubles seemed so far away";
         System.out.println("Opening lyrics: " + openingLyrics);
     }
-}
+} 
