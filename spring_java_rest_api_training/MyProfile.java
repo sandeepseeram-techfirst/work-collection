@@ -6,4 +6,4 @@ public class MyProfile {
     char gender = 'f';
     boolean lookingForJob = true;
 	}
-}
+} 
