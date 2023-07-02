@@ -20,5 +20,5 @@
     System.out.println("The statement that fido is an older dog is: " + isFidoOlder);
     System.out.println("The total age of the dogs is: " + totalDogYears);
     System.out.println("Main method finished");
-  }
+  } 
 }
