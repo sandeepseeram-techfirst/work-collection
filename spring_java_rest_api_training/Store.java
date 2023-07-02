@@ -9,7 +9,7 @@ public class Store {
     productType = product;
     inventoryCount = count;
     inventoryPrice = price;
-  }
+  } 
   
   // main method
   public static void main(String[] args) {
