@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - image: bmuschko/spring-boot-app:1.5.3
-    name: spring-boot-app
+    name: spring-boot-app 
     env:
     - name: SPRING_PROFILES_ACTIVE
       value: prod
