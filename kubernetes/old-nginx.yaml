@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: old-nginx
+    type: canary
+  name: old-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: old-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: old-nginx
+        type: canary
+    spec:
+      containers:
+      - image: nginx:1.14
+        name: nginx
+        resources: {}
+status: {}
