@@ -10,4 +10,4 @@ spec:
     - while true; do date; sleep 10; done
     image: busybox
     name: mypod
-  restartPolicy: Never
+  restartPolicy: Never 
