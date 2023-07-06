@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  labels:
+  labels: 
     app: old-nginx
     type: canary
   name: old-nginx
