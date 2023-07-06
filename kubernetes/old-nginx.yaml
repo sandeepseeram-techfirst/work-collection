@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: 
   creationTimestamp: null
   labels:
     app: old-nginx
