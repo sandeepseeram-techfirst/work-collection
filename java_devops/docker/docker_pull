@@ -1,0 +1,49 @@
+$ docker pull openjdk
+Using default tag: latest
+latest: Pulling from library/openjdk
+5a581c13a8b9: Pull complete
+26cd02acd9c2: Pull complete
+66727af51578: Pull complete
+Digest: sha256:05eee0694a2ecfc3e94d29d420bd8703fa9dcc64755962e267fd5dfc22f23664
+Status: Downloaded newer image for openjdk:latest
+docker.io/library/openjdk:latest
+
+
+$ docker images
+REPOSITORY        TAG             IMAGE ID          CREATED        SIZE
+...
+openjdk           latest          de085dce79ff     10 days ago     467MB
+openjdk           11-jre          b2552539e2dd     4 weeks ago     301MB
+... 
+
+$ docker inspect de085dce79ff
+[
+    {
+        "Id": "sha256:de085dce79ff...",
+        "RepoTags": [
+            "openjdk:latest"
+        ],
+...
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 467137618,
+        "VirtualSize": 467137618,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/581137...ca8c47/diff:/var
+                /lib/docker/overlay2/7f7929...8f8cb4/diff",
+                "MergedDir": "/var/lib/docker/overlay2/693641...940d82/merged",
+                "UpperDir": "/var/lib/docker/overlay2/693641...940d82/diff",
+                "WorkDir": "/var/lib/docker/overlay2/693641...940d82/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:1a3adb4bd0a7...",
+                "sha256:046fa1e6609c...",
+                "sha256:a8a84740beab..."
+            ]
+        },
+...
