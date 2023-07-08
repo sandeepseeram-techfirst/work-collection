@@ -20,15 +20,26 @@ import com.codecademy.plants.repositories.PlantRepository;
 @RestController
 public class PlantController {
 
-    private final PlantRepository plantRepository;
+  private final PlantRepository plantRepository;
 
-    public PlantController(final PlantRepository plantRepository) {
-        this.plantRepository = plantRepository;
-    }
+  public PlantController(final PlantRepository plantRepository) {
+    this.plantRepository = plantRepository;
+  }
 
-    @GetMapping("/plants")
-    public Iterable<Plant> getAllPlants() {
-        return this.plantRepository.findAll();
-    }
+  @GetMapping("/plants")
+  public Iterable<Plant> getAllPlants() {
+    return this.plantRepository.findAll();
+  }
+
+  @GetMapping("/plants/{id}")
+  public Optional<Plant> getPlantById(@PathVariable("id") Integer id) {
+    return this.plantRepository.findById(id);
+  }
+
+  @PostMapping("/plants")
+  public Plant createNewPlant(@RequestBody Plant plant) {
+    Plant newPlant = this.plantRepository.save(plant);
+    return newPlant;
+  }
 
 }
