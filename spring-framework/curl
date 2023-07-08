@@ -1,7 +1,7 @@
 $ curl https://api.coinbase.com/v2/prices/BTC-USD/buy
  
 {
-  "data": {
+  "data": { 
     "base": "BTC",
     "currency": "USD",
     "amount": "33006.51"
