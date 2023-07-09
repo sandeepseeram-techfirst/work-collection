@@ -1,0 +1,31 @@
+<html>
+    <title>Get all restaurants</title>
+    <script>
+        function getRestaurants() {
+            fetch('http://localhost:8080/restaurants')
+                .then(response => response.json())
+                .then(data => {
+                    const responseField = document.getElementById('responseField');
+                    responseField.innerHTML = JSON.stringify(data);
+
+                    const outputField = document.getElementById('outputField');
+                    outputField.innerHTML = '';
+                    data.forEach(restaurant => {
+                        outputField.innerHTML += getRestaurantDisplayText(restaurant);
+                    })
+                });
+        }
+
+        function getRestaurantDisplayText(restaurant) {
+            const displayText =
+                `<li>${restaurant.name}, ${restaurant.zipCode}</li>`;
+            return displayText;
+        }
+    </script>
+    <button onclick="getRestaurants()">Get restaurants</button>
+    <br>
+    <h2 id="restaurants_label">Restaurants:</h2>
+    <div id="outputField"></div>
+    <h2 id="response_label">Json Response:</h2>
+    <div id="responseField"></div>
+</html>
