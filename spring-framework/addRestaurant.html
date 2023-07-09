@@ -1,0 +1,33 @@
+<html>
+    <title>Add restaurant</title>
+    <script>
+        function addRestaurant() {
+            const restaurantName = document.getElementById('name');
+            const address = document.getElementById('address');
+            const city = document.getElementById('city');
+            const state = document.getElementById('state');
+            const zipcode = document.getElementById('zipcode');
+
+            const fakeJson = JSON.stringify({
+              name: restaurantName.value,
+              line1: address.value,
+              city: city.value,
+              state: state.value,
+              zipCode: zipcode.value,
+            });
+
+            const responseField = document.getElementById('responseField');
+            responseField.innerHTML = fakeJson;
+        }
+    </script>
+    <h2 id="restaurant_label">Add restaurant</h2>
+    Restaurant name: <input id="name"><br>
+    Address: <input id="address"><br>
+    City: <input id="city"><br>
+    State: <input id="state"><br>
+    Zip code: <input id="zipcode"><br>
+    <button onclick="addRestaurant()">Submit</button>
+
+    <h2 id="response_label">JSON Response:</h2>
+    <div id="responseField"></div>
+</html>
