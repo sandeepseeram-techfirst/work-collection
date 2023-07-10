@@ -9,7 +9,7 @@ from opentelemetry.sdk.trace.export import ConsoleSpanExporter, SimpleSpanProces
 def configure_tracer():
 
     exporter = ConsoleSpanExporter()
-
+ 
     span_processor = SimpleSpanProcessor(exporter)
 
     provider = TracerProvider()
