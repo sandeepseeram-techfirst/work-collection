@@ -7,7 +7,7 @@ from opentelemetry.propagate import extract, set_global_textmap
 from opentelemetry.propagators.b3 import B3MultiFormat
 
 from opentelemetry.trace import SpanKind
-
+ 
 from common import configure_tracer, set_span_attributes_from_flask
 
 tracer = configure_tracer("legacy-inventory", "0.9.1")
