@@ -4,7 +4,7 @@ from common import configure_tracer
 
 @tracer.start_as_current_span("browse")
 
-def browse():
+def browse(): 
 
     print("visiting the grocery store")
 
