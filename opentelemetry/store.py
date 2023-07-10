@@ -12,7 +12,7 @@ tracer = configure_tracer("0.1.2", "grocery-store")
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/") 
 
 @tracer.start_as_current_span("welcome", kind=SpanKind.SERVER)
 
