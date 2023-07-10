@@ -13,7 +13,7 @@ from opentelemetry.sdk._logs import (
 )
 
 if __name__ == "__main__":
-
+ 
     configure_log_emitter_provider()
 
     log_emitter = get_log_emitter_provider().get_log_emitter(
