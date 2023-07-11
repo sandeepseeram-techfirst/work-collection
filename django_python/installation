@@ -10,6 +10,6 @@ Collecting tzdata; sys_platform == "win32"
   Downloading tzdata-2021.5-py2.py3-none-any.whl (339 kB)
       |████████████████████████████████| 339 kB 6.4 MB/s
 Installing collected packages: sqlparse, asgiref, tzdata, Django
-Successfully installed Django-4.0.3 asgiref-3.5.0 sqlparse-0.4.2 tzdata-2021.5
+Successfully installed Django-4.0.3 asgiref-3.5.0 sqlparse-0.4.2 tzdata-2021.5 
 WARNING: You are using pip version 20.2.3; however, version 22.3 is available.
 You should consider upgrading via the 'C:\Users\Your Name\myworld\Scripts\python.exe -m pip install --upgrade pip' command.
