@@ -3,6 +3,6 @@ secret/accounting-secret created
 
 
 kubectl create -f tls-secret.yaml
-secret/accounting-secret created
+secret/accounting-secret created 
 
  
