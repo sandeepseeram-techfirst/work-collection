@@ -1,3 +1,7 @@
 kubectl create secret tls accounting-secret --cert=accounting.crt --key=accounting.key -n t75
 secret/accounting-secret created 
 
+
+kubectl create -f tls-secret.yaml
+secret/accounting-secret created
+
