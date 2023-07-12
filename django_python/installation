@@ -4,7 +4,7 @@ Collecting Django
       |████████████████████████████████| 8.0 MB 2.2 MB/s
 Collecting sqlparse>=0.2.2
   Using cached sqlparse-0.4.2-py3-none-any.whl (42 kB)
-Collecting asgiref<4,>=3.4.1
+Collecting asgiref<4,>=3.4.1 
   Downloading asgiref-3.5.0-py3-none-any.whl (22 kB) 
 Collecting tzdata; sys_platform == "win32"
   Downloading tzdata-2021.5-py2.py3-none-any.whl (339 kB)
