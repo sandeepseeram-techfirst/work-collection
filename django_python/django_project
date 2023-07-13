@@ -5,6 +5,6 @@ my_tennis_club
     my_tennis_club/
         __init__.py
         asgi.py
-        settings.py
+        settings.py 
         urls.py
         wsgi.py
