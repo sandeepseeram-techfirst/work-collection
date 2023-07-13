@@ -1,1 +1,10 @@
 django-admin startproject my_tennis_club
+
+my_tennis_club
+    manage.py
+    my_tennis_club/
+        __init__.py
+        asgi.py
+        settings.py
+        urls.py
+        wsgi.py
