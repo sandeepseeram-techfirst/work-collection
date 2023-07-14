@@ -6,3 +6,19 @@ Start by navigating to the selected location where you want to store the app, in
 If the server is still running, and you are not able to write commands, press [CTRL] [BREAK], or [CTRL] [C] to stop the server and you should be back in the virtual environment.
 
 # py manage.py startapp members
+
+
+Django creates a folder named members in my project, with this content:
+
+my_tennis_club
+    manage.py
+    my_tennis_club/
+    members/
+        migrations/
+            __init__.py
+        __init__.py
+        admin.py
+        apps.py
+        models.py
+        tests.py
+        views.py
