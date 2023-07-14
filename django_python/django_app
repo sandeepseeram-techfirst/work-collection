@@ -1,0 +1,8 @@
+Create App
+I will name my app members.
+
+Start by navigating to the selected location where you want to store the app, in my case the my_tennis_club folder, and run the command below.
+
+If the server is still running, and you are not able to write commands, press [CTRL] [BREAK], or [CTRL] [C] to stop the server and you should be back in the virtual environment.
+
+# py manage.py startapp members
