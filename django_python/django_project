@@ -7,7 +7,7 @@ my_tennis_club
         asgi.py
         settings.py 
         urls.py
-        wsgi.py
+        wsgi.py 
 
 
 Run the Django Project 
