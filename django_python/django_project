@@ -6,8 +6,8 @@ my_tennis_club
         __init__.py
         asgi.py
         settings.py 
-        urls.py
-        wsgi.py 
+        urls.py 
+        wsgi.py  
 
 
 Run the Django Project 
