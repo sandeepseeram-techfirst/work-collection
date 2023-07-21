@@ -6,4 +6,4 @@ def testing(request):
   context = {
     'firstname': 'Linus',
   } 
-  return HttpResponse(template.render(context, request))     
+  return HttpResponse(template.render(context, request))      
