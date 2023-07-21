@@ -14,7 +14,7 @@ Run the Django Project
 Navigate to the /my_tennis_club folder and execute this command in the command prompt:
 
 py manage.py runserver 
- 
+  
 Watching for file changes with StatReloader
 Performing system checks...
 
