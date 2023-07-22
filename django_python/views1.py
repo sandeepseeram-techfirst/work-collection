@@ -8,4 +8,4 @@ def testing(request):
   context = {
     'mymembers': mydata,  
   }
-  return HttpResponse(template.render(context, request))
+  return HttpResponse(template.render(context, request)) 
