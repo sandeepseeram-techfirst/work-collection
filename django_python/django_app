@@ -11,7 +11,7 @@ If the server is still running, and you are not able to write commands, press [C
 Django creates a folder named members in my project, with this content:
 
 my_tennis_club 
-    manage.py
+    manage.py 
     my_tennis_club/
     members/
         migrations/
