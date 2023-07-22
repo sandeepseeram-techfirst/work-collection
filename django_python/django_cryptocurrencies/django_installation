@@ -1,1 +1,4 @@
 pip install django
+
+Create a new Django project: Next, create a new Django project by running the following command:
+django-admin startproject cryptoprices
