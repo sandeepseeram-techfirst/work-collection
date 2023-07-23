@@ -10,3 +10,6 @@
 4. Create a new Django app: Create a new Django app inside the cryptoprices project directory by running the following command:
  
 # python manage.py startapp prices 
+
+5. Create database tables: Run the following command to create the database tables for the defined models:
+# python manage.py migrate
