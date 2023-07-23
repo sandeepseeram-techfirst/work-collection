@@ -25,3 +25,5 @@ def message(message):
     except Exception as e:
         print(e)
 
+if __name__ == '__main__':
+    sio.run(server=True)
