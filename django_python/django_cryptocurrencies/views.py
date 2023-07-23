@@ -1,5 +1,5 @@
 import socketIO
-from .models import Cryptocurrency
+from .models import Cryptocurrency 
 import json
 
 sio = socketIO.Server()
