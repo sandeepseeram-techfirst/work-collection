@@ -2,7 +2,7 @@
 
 2. Create a new Django project: Next, create a new Django project by running the following command:
 # django-admin startproject cryptoprices 
-
+ 
 3. Install required libraries: Inside the cryptoprices directory, run the following commands to install the required libraries:
 
 # pip install python-socketIO socketIOClient 
