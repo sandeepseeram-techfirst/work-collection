@@ -20,7 +20,7 @@ def message(message):
             price = data['price']
             cryptocurrency = Cryptocurrency.objects.get(symbol=symbol)
             cryptocurrency.price = price
-            cryptocurrency.save()
+            cryptocurrency.save() 
             sio.emit('price', {'symbol': symbol, 'price': price})
     except Exception as e:
         print(e)
