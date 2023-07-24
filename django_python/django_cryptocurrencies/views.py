@@ -7,7 +7,7 @@ sio = socketIO.Server()
 @sio.event
 def connect():
     print('Client connected!')
-
+ 
 @sio.event
 def disconnect():
     print('Client disconnected!')
