@@ -14,3 +14,10 @@
 5. Create database tables: Run the following command to create the database tables for the defined models:
 
 # python manage.py migrate
+
+
+Start the development server: Run the following command to start the development server:
+
+# python manage.py runserver
+
+http://localhost:8000/ 
