@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Cryptocurrency Prices</h1>
+  <ul>
+    {% for cryptocurrency in cryptocurrencies %}
+      <li>{{ cryptocurrency.symbol }} - {{ cryptocurrency.price }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
