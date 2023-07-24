@@ -2,7 +2,7 @@ import socketIO
 from .models import Cryptocurrency 
 import json
 
-sio = socketIO.Server()
+sio = socketIO.Server() 
 
 @sio.event
 def connect():
