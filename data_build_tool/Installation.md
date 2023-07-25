@@ -12,7 +12,7 @@ Your version of dbt is out of date! You can find instructions for upgrading here
 https://docs.getdbt.com/docs/installation
 
 Plugins:
-  - snowflake: 0.19.2
+  - snowflake: 0.19.2 
   - bigquery: 0.19.2
   - redshift: 0.19.2
   - postgres: 0.19.2
