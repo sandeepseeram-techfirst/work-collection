@@ -7,7 +7,7 @@ Running with dbt=0.19.2
 dbt version: 0.19.2
 python version: 3.8.10
 python path: /usr/bin/python3
-os info: Linux-5.4.0-126-generic-x86_64-with-glibc2.29
+os info: Linux-5.4.0-126-generic-x86_64-with-glibc2.29 
 Using profiles.yml file at /root/.dbt/profiles.yml
 Using dbt_project.yml file at /root/dbt_demo/dbt_project.yml
 
