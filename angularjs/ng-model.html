@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    Name: <input ng-model="firstname">
+    <h1>{{firstname}}</h1>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstname = "John";
+    $scope.lastname = "Doe";    
+});
+</script>
+
+<p>Change the name inside the input field, and the model data will change automatically, and therefore also the header will change its value.</p>
+
+</body>
+</html>
