@@ -13,7 +13,7 @@ client
       }
     }
   })
-  .then(({ body }) => {
+  .then(({ body }) => { 
     const { hits } = body.hits
     console.log(hits)
   })
