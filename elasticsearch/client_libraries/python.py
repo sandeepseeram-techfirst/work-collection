@@ -16,6 +16,6 @@ response = esclient.search(
                     "size": 10
                 }
             }
-        }
+        } 
     }
 )
