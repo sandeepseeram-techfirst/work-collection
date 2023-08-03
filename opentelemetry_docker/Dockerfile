@@ -1,7 +1,7 @@
 # Copyright The OpenTelemetry Authors
 # SPDX-License-Identifier: Apache-2.0
  
-FROM python:3.10-slim-bullseye as base
+FROM python:3.10-slim-bullseye as base 
 #omitted for clarity
   
 FROM base as runtime
