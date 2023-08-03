@@ -3,7 +3,7 @@ from opentelemetry import trace, metrics
  
 # other code removed for clarity
  
-if __name__ == "__main__":
+if __name__ == "__main__": 
     service_name = must_map_env('OTEL_SERVICE_NAME')
   
     # now, we can call the tracing and metrics providers to hook into the SDK being configured by our agent.
