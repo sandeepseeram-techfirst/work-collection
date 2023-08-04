@@ -53,7 +53,7 @@ services:
             # - '55681:55679' # zpages extension
         depends_on:
             - jaeger
-            - zipkin
+            - zipkin 
 
     # BackEnd
 
