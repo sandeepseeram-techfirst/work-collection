@@ -1,6 +1,6 @@
 $ docker info
 Client:
- Context:    default
+ Context:    default 
  Debug Mode: false
  Plugins:
   app: Docker App (Docker Inc., v0.9.1-beta3)
