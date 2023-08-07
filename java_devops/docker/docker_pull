@@ -16,7 +16,7 @@ openjdk           latest          de085dce79ff     10 days ago     467MB
 openjdk           11-jre          b2552539e2dd     4 weeks ago     301MB
 ... 
 
-$ docker inspect de085dce79ff
+$ docker inspect de085dce79ff 
 [
     {
         "Id": "sha256:de085dce79ff...",
