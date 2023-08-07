@@ -6,7 +6,7 @@ FROM maven:3.8.4-openjdk-11-slim as build
 
 COPY .mvn .mvn
 COPY mvnw .
-COPY pom.xml .
+COPY pom.xml . 
 COPY src src
 
 RUN ./mvnw package
