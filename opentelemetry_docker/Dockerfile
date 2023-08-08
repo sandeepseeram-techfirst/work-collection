@@ -3,7 +3,7 @@
  
 FROM python:3.10-slim-bullseye as base
 #omitted for clarity
- 
+  
 FROM base as runtime
 WORKDIR /usr/src/app/
 COPY --from=builder /reqs /usr/local
