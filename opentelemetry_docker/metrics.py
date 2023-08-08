@@ -5,7 +5,7 @@ from opentelemetry import trace, metrics
  
 if __name__ == "__main__":
     service_name = must_map_env('OTEL_SERVICE_NAME')
- 
+  
     # now, we can call the tracing and metrics providers to hook into the SDK being configured by our agent.
     tracer = trace.get_tracer_provider().get_tracer(service_name)
     meter = metrics.get_meter_provider().get_meter(service_name)
