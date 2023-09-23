@@ -4,7 +4,7 @@ var resp = [];
 for (var i=0; i < searchTerms.length; i++) {
     // retrieve request object from session
     var searchTerm = searchTerms[i];
-    req = context.session["searchTerm:" + searchTerm];
+    req = context.session["searchTerm:" + searchTerm]; 
     req.waitForComplete();
     print("Got response for " + searchTerm);
     if (req.isSuccess()) {
