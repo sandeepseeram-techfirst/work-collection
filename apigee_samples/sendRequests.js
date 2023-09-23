@@ -4,7 +4,7 @@ if (searchParam === null || searchParam.length === 0) {
     throw("search query parameter not found");
 }
 var search = searchParam.split(",");
-print("search=" + search);
+print("search=" + search); 
 // call max 5 in parallel
 var maxCalls = search.length;
 if (maxCalls > 5) {
