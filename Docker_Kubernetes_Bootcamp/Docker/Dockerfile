@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # Copy package files and install dependencies 3
 COPY package*.json ./
 RUN npm install
-RUN npm install express
+RUN npm install express 
 
 # Copy all of the app files into the image 4
 COPY . .
