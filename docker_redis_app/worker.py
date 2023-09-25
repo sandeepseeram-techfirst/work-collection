@@ -1,7 +1,7 @@
 import logging
 import os
 from redis import Redis
-import requests
+import requests 
 import time
 
 DEBUG = os.environ.get("DEBUG", "").lower().startswith("y")
