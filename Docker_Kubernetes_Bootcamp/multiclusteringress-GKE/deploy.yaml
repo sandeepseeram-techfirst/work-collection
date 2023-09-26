@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: whereami-deployment
   namespace: whereami
-  labels:
+  labels: 
     app: whereami
 spec:
   selector:
