@@ -5,7 +5,7 @@ metadata:
   namespace: whereami
 spec:
   template:
-    spec:
+    spec: 
       selector:
         app: whereami
       ports:
