@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
-metadata:
-  labels:
+metadata: 
+  labels: 
     admission.gatekeeper.sh/ignore: no-self-managing
     control-plane: controller-manager
     gatekeeper.sh/system: "yes"
