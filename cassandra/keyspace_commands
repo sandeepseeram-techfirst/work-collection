@@ -4,7 +4,7 @@ cqlsh>
 
 ###############################################################################################################
  
-cqlsh> DESCRIBE KEYSPACE my_keyspace;
+cqlsh> DESCRIBE KEYSPACE my_keyspace; 
 
 CREATE KEYSPACE my_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
 
