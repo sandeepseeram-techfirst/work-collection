@@ -1,6 +1,6 @@
 Connected to Test Cluster at 127.0.0.1:9042.
 [cqlsh 5.0.1 | Cassandra 4.0-alpha4 | CQL spec 3.4.5 | Native protocol v4]
-Use HELP for help.
+Use HELP for help. 
 cqlsh> 
 cqlsh> CREATE KEYSPACE my_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 cqlsh> CREATE TABLE my_keyspace.user (first_name text, last_name text, title text, PRIMARY KEY (last_name, first_name));
