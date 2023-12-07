@@ -28,7 +28,7 @@ spec:
   - path: /
     action:
       pass: juiceshop
-    errorPages:
+    errorPages: 
     - codes: [502]
       return:
         code: 200
