@@ -5,7 +5,7 @@ kind: VirtualServer
 metadata:
   name: cafe-bluegreen-vs
 spec:
-  host: cafe.example.com
+  host: cafe.example.com 
   tls: 
     secret: cafe-secret
     redirect:
