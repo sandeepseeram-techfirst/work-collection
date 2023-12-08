@@ -18,7 +18,7 @@ spec:
       #enable: true
       #path: /
       #interval: 5s
-      #jitter: 3s 
+      #jitter: 3s  
       #fails: 2
       #passes: 2
       #port: 3000
