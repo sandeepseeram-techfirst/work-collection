@@ -19,7 +19,7 @@ spec:
       #path: /
       #interval: 5s
       #jitter: 3s  
-      #fails: 2
+      #fails: 2 
       #passes: 2
       #port: 3000
       #connect-timeout: 15s
