@@ -36,7 +36,7 @@ spec:
       #path: /coffee
       #interval: 10s
       #jitter: 3s
-      #fails: 3
+      #fails: 3 
       #passes: 2
       #connect-timeout: 30s
       #read-timeout: 20s
