@@ -9,7 +9,7 @@ spec:
   host: juiceshop.example.com
   tls:
     secret: juice-secret
-  upstreams:
+  upstreams: 
   - name: juiceshop
     service: juiceshop-svc
     port: 80
