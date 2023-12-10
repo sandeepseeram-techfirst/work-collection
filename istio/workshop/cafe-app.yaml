@@ -41,7 +41,7 @@ spec:
       #connect-timeout: 30s
       #read-timeout: 20s
   routes: 
-  - path: / 
+  - path: /
     action:
       redirect:
         url: https://cafe.example.com/coffee
