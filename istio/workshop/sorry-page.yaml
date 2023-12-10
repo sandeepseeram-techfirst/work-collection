@@ -24,7 +24,7 @@ spec:
       #port: 3000
       #connect-timeout: 15s
       #read-timeout: 5s
-  routes:
+  routes: 
   - path: /
     action:
       pass: juiceshop
