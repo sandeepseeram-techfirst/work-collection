@@ -15,7 +15,7 @@ spec:
     port: 80
     #slow-start: 10s
     #healthCheck:
-      #enable: true
+      #enable: true 
       #path: /
       #interval: 5s
       #jitter: 3s
