@@ -4,4 +4,4 @@ metadata:
   name: nginx-config
   namespace: nginx-ingress
 data:
-  lb-method: "round_robin"
+  lb-method: "round_robin" 
