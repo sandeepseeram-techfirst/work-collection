@@ -10,7 +10,7 @@ spec:
   tls:
     secret: juice-secret
   upstreams: 
-  - name: juiceshop
+  - name: juiceshop 
     service: juiceshop-svc
     port: 3000
     #slow-start: 10s
