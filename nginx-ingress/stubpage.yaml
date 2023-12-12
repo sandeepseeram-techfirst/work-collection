@@ -9,7 +9,7 @@ spec:
     targetPort: 9000
     protocol: TCP
     name: stubstatus
-  selector:
+  selector: 
     app: nginx-ingress
 ---
 apiVersion: k8s.nginx.org/v1
