@@ -11,3 +11,19 @@ spec:
     name: stubstatus
   selector:
     app: nginx-ingress
+---
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServer
+metadata:
+  name: stubstatus-vs
+  namespace: nginx-ingress
+spec:
+  host: dashboard.example.com
+  upstreams:
+  - name: stubstatus
+    service: stubstatus-svc
+    port: 9000
+  routes:
+  - path: /stub_status.html
+    action:
+      pass: stubstatus
