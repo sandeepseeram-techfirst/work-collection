@@ -38,7 +38,7 @@ spec:
       #passes: 2
       #connect-timeout: 30s
       #read-timeout: 20s
-  routes:
+  routes: 
   - path: / 
     action:
       redirect:
