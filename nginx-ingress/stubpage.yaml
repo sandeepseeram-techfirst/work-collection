@@ -12,7 +12,7 @@ spec:
   selector: 
     app: nginx-ingress
 ---
-apiVersion: k8s.nginx.org/v1
+apiVersion: k8s.nginx.org/v1 
 kind: VirtualServer
 metadata:
   name: stubstatus-vs
