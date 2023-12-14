@@ -40,7 +40,7 @@ spec:
       #read-timeout: 20s
   routes: 
   - path: / 
-    action:
+    action: 
       redirect:
         url: https://cafe.example.com/coffee
         code: 302
