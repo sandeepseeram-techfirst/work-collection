@@ -7,7 +7,7 @@ spec:
   ports:
   - port: 9000
     targetPort: 9000
-    protocol: TCP
+    protocol: TCP 
     name: stubstatus
   selector: 
     app: nginx-ingress
