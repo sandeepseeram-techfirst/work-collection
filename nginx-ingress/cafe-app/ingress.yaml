@@ -1,5 +1,5 @@
 apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
+kind: Ingress 
 metadata:
   name: cafe-ingress
 spec:
