@@ -1,7 +1,7 @@
 #Example VirtualServer with routes for Bar Demo for NIC OSS
 #
 apiVersion: k8s.nginx.org/v1
-kind: VirtualServer
+kind: VirtualServer 
 metadata:
   name: bar-vs
 spec:
