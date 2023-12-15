@@ -82,7 +82,7 @@ spec:
     metadata:
       labels:
         app: cosmo
-    spec:
+    spec: 
       containers:
       - name: cosmo 
         image: nginxinc/ingress-demo
