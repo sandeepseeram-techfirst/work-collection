@@ -83,7 +83,7 @@ spec:
       labels:
         app: cosmo
     spec: 
-      containers:
+      containers: 
       - name: cosmo 
         image: nginxinc/ingress-demo
         ports:
