@@ -6,7 +6,7 @@ metadata:
 spec:
   host: prometheus.example.com
   upstreams:
-  - name: prometheus 
+  - name: prometheus
     service: nginx-prometheus-server
     port: 80 
   routes:
