@@ -60,7 +60,7 @@ spec:
           - -default-server-tls-secret=$(POD_NAMESPACE)/default-server-secret
           - -nginx-status-port=9000
           - -nginx-status-allow-cidrs=0.0.0.0/0
-          - -enable-snippets 
+          - -enable-snippets
          #- -enable-app-protect
          #- -v=3 # Enables extensive logging. Useful for troubleshooting.
           - -report-ingress-status
