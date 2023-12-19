@@ -8,7 +8,7 @@ metadata:
 spec:
   host: juiceshop.example.com
   tls:
-    secret: juice-secret
+    secret: juice-secret 
   upstreams:
   - name: juiceshop
     service: juiceshop-svc
