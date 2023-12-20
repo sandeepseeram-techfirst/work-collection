@@ -27,7 +27,7 @@ metadata:
   name: juiceshop-svc
   namespace: juice
 spec:
-  type: ClusterIP 
+  type: ClusterIP
   clusterIP: None
   ports:
   - port: 80 
