@@ -63,7 +63,7 @@ spec:
           - -enable-snippets
          #- -enable-app-protect
          #- -v=3 # Enables extensive logging. Useful for troubleshooting.
-          - -report-ingress-status 
+          - -report-ingress-status
          #- -external-service=nginx-ingress
           - -enable-prometheus-metrics
          #- -global-configuration=$(POD_NAMESPACE)/nginx-configuration
