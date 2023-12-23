@@ -48,7 +48,7 @@ spec:
         app: tea
     spec:
       containers:
-      - name: tea
+      - name: tea 
         image: nginxinc/ingress-demo
         ports:
         - containerPort: 80
