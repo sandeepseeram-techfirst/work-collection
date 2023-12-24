@@ -6,7 +6,7 @@ spec:
   host: cafe.example.com
   tls:
     secret: cafe-secret
-    redirect:
+    redirect: 
       enable: true   #Redirect from http > https
       code: 301
   upstreams:
