@@ -32,7 +32,7 @@ spec:
       passes: 5
       statusMatch: "! 500"
   - name: arcadia-app3
-    service: arcadia-app3
+    service: arcadia-app3 
     port: 80
     healthCheck:
       enable: true
