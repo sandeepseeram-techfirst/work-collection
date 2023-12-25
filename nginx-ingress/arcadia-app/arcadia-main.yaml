@@ -15,7 +15,7 @@ spec:
         app: main
         version: v1
     spec:
-      containers:
+      containers: 
       - name: main
         image: registry.gitlab.com/arcadia-application/main-app/mainapp:latest
         imagePullPolicy: IfNotPresent
