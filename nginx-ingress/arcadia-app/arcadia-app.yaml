@@ -5,7 +5,7 @@ metadata:
 spec:
   host: $nginx_ingress
   tls:
-    secret: arcadia-secret
+    secret: arcadia-secret 
   upstreams:
   - name: arcadia-main
     service: arcadia-main
