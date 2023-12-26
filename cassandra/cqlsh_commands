@@ -4,7 +4,7 @@ cqlsh>
 
 ###########################################################################
 
-cqlsh> DESCRIBE CLUSTER
+cqlsh> DESCRIBE CLUSTER 
 
 Cluster: Test Cluster
 Partitioner: Murmur3Partitioner
