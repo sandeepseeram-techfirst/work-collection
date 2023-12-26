@@ -6,7 +6,7 @@ Connecting to archive.apache.org (archive.apache.org)|65.108.204.189|:80... conn
 HTTP request sent, awaiting response... 200 OK  
 Length: 48720794 (46M) [application/x-gzip]
 Saving to: ‘apache-cassandra-4.0-alpha4-bin.tar.gz’
-
+ 
 apache-cassandra-4.0-alpha4- 100%[===========================================>]  46.46M  67.7MB/s    in 0.7s    
 
 2023-05-29 07:55:12 (67.7 MB/s) - ‘apache-cassandra-4.0-alpha4-bin.tar.gz’ saved [48720794/48720794]
