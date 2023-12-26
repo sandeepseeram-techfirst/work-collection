@@ -52,7 +52,7 @@ spec:
     port: 80
     lb-method: round_robin
     healthCheck:
-      enable: true
+      enable: true 
       path: /app3
       interval: 15s
       jitter: 3s
