@@ -1,6 +1,6 @@
 var searchTerms = context.session["searchTerms"];
 var resp = [];
-// Iterate for each search term
+// Iterate for each search term 
 for (var i=0; i < searchTerms.length; i++) {
     // retrieve request object from session
     var searchTerm = searchTerms[i];

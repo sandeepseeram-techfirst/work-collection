@@ -3,7 +3,7 @@ var searchParam = context.getVariable("request.queryparam.search");
 if (searchParam === null || searchParam.length === 0) {
     throw("search query parameter not found");
 }
-var search = searchParam.split(",");
+var search = searchParam.split(","); 
 print("search=" + search); 
 // call max 5 in parallel
 var maxCalls = search.length;
