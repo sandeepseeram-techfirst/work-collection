@@ -50,7 +50,7 @@ spec:
       containers:
       - name: tea
         image: nginxinc/ingress-demo
-        ports:
+        ports: 
         - containerPort: 80
 ---
 apiVersion: v1 
