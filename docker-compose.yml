@@ -1,0 +1,13 @@
+version: '3'
+services:
+  common:
+    build: ../scs-demo-esi-common/
+  order:
+    build: ../scs-demo-esi-order
+  varnish:
+    build: varnish
+    links:
+     - common
+     - order
+    ports:
+     - "8080:8080"
