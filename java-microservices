@@ -3,18 +3,5 @@ COPY target/customer.jar .
 CMD /usr/bin/java -Xmx400m -Xms400m -jar customer.jar
 EXPOSE 8080 
 
-Docker Compose
+ 
 
-version: '3'
-services:
-  common:
-    build: ../scs-demo-esi-common/
-  order:
-    build: ../scs-demo-esi-order
-  varnish:
-    build: varnish
-    links:
-     - common
-     - order
-    ports:
-     - "8080:8080"
